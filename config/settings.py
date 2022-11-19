@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 PROJECT_APPS = [
     'about_university',
+    'education',
+    'science_and_innovation',
     'ckeditor',
     'ckeditor_uploader',
 ]
@@ -157,6 +159,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": "images/favicon.png",
     # Add your own branding here
     "site_logo": None,
+    "site_logo_classes": "img-triangle",
     "welcome_sign": "Welcome to the MPEI.uz",
     # Copyright on the footer
     "copyright": "MPEI.uz",
@@ -169,7 +172,7 @@ JAZZMIN_SETTINGS = {
         # Url that gets reversed (Permissions can be added)
         {"name": "MPEI.uz", "url": "home", "permissions": ["auth.view_user"]},
         # model admin to link to (Permissions checked against model)
-        {"model": "auth.User"},
+        # {"model": "auth.User"},
     ],
     #############
     # Side Menu #
@@ -207,12 +210,13 @@ JAZZMIN_SETTINGS = {
     ###############
     # Change view #
     ###############
-    "changeform_format": "horizontal_tabs",
+    "changeform_format": "carousel", # horizontal_tabs
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {
         "auth.user": "collapsible",
         "auth.group": "vertical_tabs",
     },
+    "language_chooser": True,
 }
 JAZZMIN_UI_TWEAKS = {
     "navbar_small_text": False,
@@ -234,7 +238,7 @@ JAZZMIN_UI_TWEAKS = {
     "sidebar_nav_compact_style": False,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "lumen",
+    "theme": "sketchy", # lumen
     "dark_mode_theme": None,
     "button_classes": {
         "primary": "btn-outline-primary",

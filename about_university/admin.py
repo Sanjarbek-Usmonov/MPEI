@@ -1,13 +1,18 @@
 from django.contrib import admin
 from .models import *
 from modeltranslation.admin import TranslationAdmin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 
-admin.site.register(Contact)
 admin.site.register(LegalInfo)
 admin.site.register(WEBresource)
 admin.site.register(Partners)
 admin.site.register(Honorary)
+
+admin.site.unregister(Group)
+admin.site.unregister(User)
+admin.site.register(CustomUser, UserAdmin)
 
 class MyTranslationAdmin(TranslationAdmin):
     class Media:
@@ -24,4 +29,9 @@ class MyTranslationAdmin(TranslationAdmin):
 class IntroduceMEIAdmin(MyTranslationAdmin):
     list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['id', 'fullname', 'subject', 'created_at']
+    search_fields = ['fullname', 'id', 'subject']
 
