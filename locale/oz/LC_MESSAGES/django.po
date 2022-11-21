@@ -16,15 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\about_university\apps.py:8
 msgid "about_university"
-msgstr "Universitet haqida"
+msgstr "Университет ҳақида"
 
 #: .\about_university\models.py:10 .\about_university\models.py:11
 msgid "User"
-msgstr "Tizim foydalanuvchilari"
+msgstr "Тизим фойдаланувчилари"
 
 #: .\about_university\models.py:14 .\about_university\models.py:26
 #: .\about_university\models.py:35 .\about_university\models.py:44
@@ -34,7 +33,7 @@ msgstr "Tizim foydalanuvchilari"
 #: .\science_and_innovation\models.py:6 .\science_and_innovation\models.py:15
 #: .\science_and_innovation\models.py:34 .\science_and_innovation\models.py:53
 msgid "Text"
-msgstr "Matn"
+msgstr "Матн"
 
 #: .\about_university\models.py:15 .\about_university\models.py:27
 #: .\about_university\models.py:36 .\about_university\models.py:45
@@ -47,7 +46,7 @@ msgstr "Matn"
 #: .\science_and_innovation\models.py:35 .\science_and_innovation\models.py:45
 #: .\science_and_innovation\models.py:55
 msgid "created_at"
-msgstr "-da hosil qilindi"
+msgstr "да ҳосил қилинди"
 
 #: .\about_university\models.py:16 .\about_university\models.py:28
 #: .\about_university\models.py:37 .\about_university\models.py:46
@@ -60,56 +59,54 @@ msgstr "-da hosil qilindi"
 #: .\science_and_innovation\models.py:36 .\science_and_innovation\models.py:46
 #: .\science_and_innovation\models.py:56
 msgid "updated_at"
-msgstr "-da tahrirlandi"
+msgstr "да таҳрирланди"
 
 #: .\about_university\models.py:19 .\about_university\models.py:20
 msgid "Introducing with MPEI"
-msgstr "MPEI bilan tanishtirish"
+msgstr "МПEИ билан таништириш"
 
 #: .\about_university\models.py:23 .\about_university\models.py:62
 msgid "Full name"
-msgstr "To'liq ismi sharif"
+msgstr "Тўлиқ исми шариф"
 
 #: .\about_university\models.py:24
 msgid "Subject"
-msgstr "Mavzu"
+msgstr "Мавзу"
 
 #: .\about_university\models.py:25
 msgid "Email"
-msgstr "Elektron pochta"
+msgstr "Электрон почта"
 
 #: .\about_university\models.py:31 .\about_university\models.py:32
 msgid "Contact"
-msgstr "Bog'lanish"
+msgstr "Боғланиш"
 
 #: .\about_university\models.py:40 .\about_university\models.py:41
 msgid "Legal info"
-msgstr "MPEI yuridik maʼlumotlari"
+msgstr "МПEИ юридик маълумотлари"
 
 #: .\about_university\models.py:49 .\about_university\models.py:50
 msgid "WEB resources"
-msgstr "WEB manbalari"
+msgstr "ВEБ манбалари"
 
 #: .\about_university\models.py:58 .\about_university\models.py:59
 msgid "Partners"
-msgstr "Hamkorlar"
+msgstr "Ҳамкорлар"
 
 #: .\about_university\models.py:63
 msgid "Degree"
-msgstr "Ilmiy daraja"
+msgstr "Илмий даража"
 
 #: .\about_university\models.py:64 .\science_and_innovation\models.py:25
 #: .\science_and_innovation\models.py:44
 msgid "image"
-msgstr "Rasm"
+msgstr "Расм"
 
 #: .\about_university\models.py:69 .\about_university\models.py:70
 msgid "Honorary people"
-msgstr "Faxriy shaxslar"
+msgstr "Фахрий шахслар"
 
 #: .\config\settings.py:119
-#, fuzzy
-#| msgid "Uzbek"
 msgid "Uzbek Kiril"
 msgstr "Узбек"
 
@@ -119,89 +116,89 @@ msgstr "Узбек"
 
 #: .\config\settings.py:121
 msgid "English"
-msgstr "Ingliz"
+msgstr "Инглиз"
 
 #: .\config\settings.py:122
 msgid "Russian"
-msgstr "Rus"
+msgstr "Рус"
 
 #: .\education\apps.py:8
 msgid "education"
-msgstr "Ta'lim"
+msgstr "Таълим"
 
 #: .\education\models.py:6 .\education\models.py:15
 #: .\science_and_innovation\models.py:24 .\science_and_innovation\models.py:43
 msgid "Name"
-msgstr "Nomi"
+msgstr "Номи"
 
 #: .\education\models.py:11 .\education\models.py:12 .\education\models.py:16
 msgid "Faculties"
-msgstr "Fakultetlar"
+msgstr "Факультетлар"
 
 #: .\education\models.py:21 .\education\models.py:22 .\education\models.py:26
 msgid "Groups"
-msgstr "Guruhlar"
+msgstr "Гуруҳлар"
 
 #: .\education\models.py:25
 msgid "Upload file"
-msgstr "Faylni yuklash"
+msgstr "Файлни юклаш"
 
 #: .\education\models.py:31 .\education\models.py:32
 msgid "Schedule"
-msgstr "Jadval"
+msgstr "Жадвал"
 
 #: .\education\models.py:40 .\education\models.py:41
 msgid "Basic education programs"
-msgstr "Asosiy ta'lim dasturlari"
+msgstr "Асосий таълим дастурлари"
 
 #: .\education\models.py:49 .\education\models.py:50
 msgid "Training results"
-msgstr "Trening natijalari"
+msgstr "Тренинг натижалари"
 
 #: .\education\models.py:58 .\education\models.py:59
 msgid "Additional education"
-msgstr "Qo'shimcha ta'lim"
+msgstr "Қўшимча таълим"
 
 #: .\education\models.py:67 .\education\models.py:68
 msgid "Distance education"
-msgstr "Masofaviy ta'lim"
+msgstr "Масофавий таълим"
 
 #: .\education\models.py:76 .\education\models.py:77
 msgid "Employment and internship"
-msgstr "Ishga joylashish va amaliyot"
+msgstr "Ишга жойлашиш ва амалиёт"
 
 #: .\education\models.py:85 .\education\models.py:86
 msgid "Final qualifiers"
-msgstr "Yakuniy saralash"
+msgstr "Якуний саралаш"
 
 #: .\education\models.py:94 .\education\models.py:95
 msgid "Official documents"
-msgstr "Rasmiy hujjatlar"
+msgstr "Расмий ҳужжатлар"
 
 #: .\science_and_innovation\apps.py:8
 msgid "Science and Innovation"
-msgstr "Ilm-fan va innovatsiyalar"
+msgstr "Илм-фан ва инновациялар"
 
 #: .\science_and_innovation\models.py:11 .\science_and_innovation\models.py:12
 msgid "Research and development"
-msgstr "Tadqiqot va ishlanmalar"
+msgstr "Тадқиқот ва ишланмалар"
 
 #: .\science_and_innovation\models.py:20 .\science_and_innovation\models.py:21
 msgid "Scientific infrastructure"
-msgstr "Ilmiy infratuzilma"
+msgstr "Илмий инфратузилма"
 
 #: .\science_and_innovation\models.py:30 .\science_and_innovation\models.py:31
 msgid "State scientific certificate"
-msgstr "Davlat ilmiy sertifikati"
+msgstr "Давлат илмий сертификати"
 
 #: .\science_and_innovation\models.py:39 .\science_and_innovation\models.py:40
 msgid "Journals"
-msgstr "Jurnallar"
+msgstr "Журналлар"
 
 #: .\science_and_innovation\models.py:49 .\science_and_innovation\models.py:50
 msgid "Scientific event detail"
-msgstr "Ilmiy tadbir tafsiloti"
+msgstr "Илмий тадбир тафсилоти"
 
 #: .\science_and_innovation\models.py:59 .\science_and_innovation\models.py:60
 msgid "Scientific events"
-msgstr "Ilmiy tadbirlar"
+msgstr "Илмий тадбирлар"

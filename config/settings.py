@@ -116,10 +116,27 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
+    ('oz', _('Uzbek Kiril')),
     ('uz', _('Uzbek')),
     ('en', _('English')),
     ('ru', _('Russian')),
 ]
+
+EXTRA_LANG_INFO = {
+    'oz': {
+        'bidi': False,
+        'code': 'oz',
+        'name': 'Kiril',
+        'name_local': u"Узбек",
+    },
+}
+import django.conf.locale
+from django.conf import global_settings
+LANG_INFO = dict(django.conf.locale.LANG_INFO, **EXTRA_LANG_INFO)
+django.conf.locale.LANG_INFO = LANG_INFO
+global_settings.LANGUAGES = global_settings.LANGUAGES + [("oz", 'Узбек')]
+
+
 LOCALE_PATHS = [
   BASE_DIR / 'locale'
 ]
@@ -238,7 +255,7 @@ JAZZMIN_UI_TWEAKS = {
     "sidebar_nav_compact_style": False,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "sketchy", # lumen
+    "theme": "lumen", # lumen
     "dark_mode_theme": None,
     "button_classes": {
         "primary": "btn-outline-primary",
