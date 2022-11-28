@@ -34,6 +34,10 @@ PROJECT_APPS = [
     'about_university',
     'education',
     'science_and_innovation',
+    'foreign',
+    'university_life',
+    'structure',
+    'ads',
     'ckeditor',
     'ckeditor_uploader',
 ]
@@ -65,7 +69,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -171,7 +175,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # JAZZMIN settings
 JAZZMIN_SETTINGS = {
     "site_title": "MPEI.uz",
-    "site_header": "your_site_header",
+    "site_header": "MPEI",
     "site_brand": "MPEI.uz",
     "site_icon": "images/favicon.png",
     # Add your own branding here
@@ -181,6 +185,8 @@ JAZZMIN_SETTINGS = {
     # Copyright on the footer
     "copyright": "MPEI.uz",
     "user_avatar": None,
+     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
+    # "login_logo": "https://digital-ball.ru/upload/iblock/aa6/aa60cfe9e773b5b138f498cce606db9d.png",
     ############
     # Top Menu #
     ############

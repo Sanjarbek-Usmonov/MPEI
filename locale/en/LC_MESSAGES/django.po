@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-21 12:26+0500\n"
+"POT-Creation-Date: 2022-11-28 22:36+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,37 +28,62 @@ msgstr "System users"
 
 #: .\about_university\models.py:14 .\about_university\models.py:26
 #: .\about_university\models.py:35 .\about_university\models.py:44
-#: .\about_university\models.py:53 .\education\models.py:35
+#: .\about_university\models.py:53 .\ads\models.py:16 .\education\models.py:35
 #: .\education\models.py:44 .\education\models.py:53 .\education\models.py:62
 #: .\education\models.py:71 .\education\models.py:80 .\education\models.py:89
+#: .\foreign\models.py:6 .\foreign\models.py:25 .\foreign\models.py:35
+#: .\foreign\models.py:44 .\foreign\models.py:53 .\foreign\models.py:62
+#: .\foreign\models.py:71 .\foreign\models.py:80 .\foreign\models.py:89
 #: .\science_and_innovation\models.py:6 .\science_and_innovation\models.py:15
 #: .\science_and_innovation\models.py:34 .\science_and_innovation\models.py:53
+#: .\structure\models.py:18 .\structure\models.py:38 .\structure\models.py:60
+#: .\structure\models.py:69 .\structure\models.py:78
+#: .\university_life\models.py:6 .\university_life\models.py:15
+#: .\university_life\models.py:24 .\university_life\models.py:33
 msgid "Text"
 msgstr "Text"
 
 #: .\about_university\models.py:15 .\about_university\models.py:27
 #: .\about_university\models.py:36 .\about_university\models.py:45
 #: .\about_university\models.py:54 .\about_university\models.py:65
-#: .\education\models.py:7 .\education\models.py:17 .\education\models.py:27
-#: .\education\models.py:36 .\education\models.py:45 .\education\models.py:54
-#: .\education\models.py:63 .\education\models.py:72 .\education\models.py:81
-#: .\education\models.py:90 .\science_and_innovation\models.py:7
+#: .\ads\models.py:8 .\ads\models.py:17 .\education\models.py:7
+#: .\education\models.py:17 .\education\models.py:27 .\education\models.py:36
+#: .\education\models.py:45 .\education\models.py:54 .\education\models.py:63
+#: .\education\models.py:72 .\education\models.py:81 .\education\models.py:90
+#: .\foreign\models.py:7 .\foreign\models.py:17 .\foreign\models.py:27
+#: .\foreign\models.py:36 .\foreign\models.py:45 .\foreign\models.py:54
+#: .\foreign\models.py:63 .\foreign\models.py:72 .\foreign\models.py:81
+#: .\foreign\models.py:90 .\science_and_innovation\models.py:7
 #: .\science_and_innovation\models.py:16 .\science_and_innovation\models.py:26
 #: .\science_and_innovation\models.py:35 .\science_and_innovation\models.py:45
-#: .\science_and_innovation\models.py:55
+#: .\science_and_innovation\models.py:55 .\structure\models.py:10
+#: .\structure\models.py:19 .\structure\models.py:30 .\structure\models.py:40
+#: .\structure\models.py:52 .\structure\models.py:61 .\structure\models.py:70
+#: .\structure\models.py:79 .\university_life\models.py:7
+#: .\university_life\models.py:16 .\university_life\models.py:25
+#: .\university_life\models.py:34
 msgid "created_at"
 msgstr "Created at"
 
 #: .\about_university\models.py:16 .\about_university\models.py:28
 #: .\about_university\models.py:37 .\about_university\models.py:46
 #: .\about_university\models.py:55 .\about_university\models.py:66
-#: .\education\models.py:8 .\education\models.py:18 .\education\models.py:28
-#: .\education\models.py:37 .\education\models.py:46 .\education\models.py:55
-#: .\education\models.py:64 .\education\models.py:73 .\education\models.py:82
-#: .\education\models.py:91 .\science_and_innovation\models.py:8
+#: .\ads\models.py:9 .\ads\models.py:18 .\education\models.py:8
+#: .\education\models.py:18 .\education\models.py:28 .\education\models.py:37
+#: .\education\models.py:46 .\education\models.py:55 .\education\models.py:64
+#: .\education\models.py:73 .\education\models.py:82 .\education\models.py:91
+#: .\foreign\models.py:8 .\foreign\models.py:18 .\foreign\models.py:28
+#: .\foreign\models.py:37 .\foreign\models.py:46 .\foreign\models.py:55
+#: .\foreign\models.py:64 .\foreign\models.py:73 .\foreign\models.py:82
+#: .\foreign\models.py:91 .\science_and_innovation\models.py:8
 #: .\science_and_innovation\models.py:17 .\science_and_innovation\models.py:27
 #: .\science_and_innovation\models.py:36 .\science_and_innovation\models.py:46
-#: .\science_and_innovation\models.py:56
+#: .\science_and_innovation\models.py:56 .\structure\models.py:11
+#: .\structure\models.py:20 .\structure\models.py:31 .\structure\models.py:41
+#: .\structure\models.py:53 .\structure\models.py:62 .\structure\models.py:71
+#: .\structure\models.py:80 .\university_life\models.py:8
+#: .\university_life\models.py:17 .\university_life\models.py:26
+#: .\university_life\models.py:35
 msgid "updated_at"
 msgstr "Updated at"
 
@@ -98,8 +123,9 @@ msgstr "Partners"
 msgid "Degree"
 msgstr "Degree"
 
-#: .\about_university\models.py:64 .\science_and_innovation\models.py:25
-#: .\science_and_innovation\models.py:44
+#: .\about_university\models.py:64 .\ads\models.py:7 .\foreign\models.py:16
+#: .\science_and_innovation\models.py:25 .\science_and_innovation\models.py:44
+#: .\structure\models.py:9 .\structure\models.py:29 .\structure\models.py:51
 msgid "image"
 msgstr "Image"
 
@@ -107,32 +133,40 @@ msgstr "Image"
 msgid "Honorary people"
 msgstr "Honorary people"
 
-#: .\config\settings.py:119
-#, fuzzy
-#| msgid "Uzbek"
+#: .\ads\apps.py:7 .\ads\models.py:12 .\ads\models.py:13
+msgid "Ads"
+msgstr "Ads"
+
+#: .\ads\models.py:6 .\education\models.py:6 .\education\models.py:15
+#: .\foreign\models.py:15 .\science_and_innovation\models.py:24
+#: .\science_and_innovation\models.py:43 .\structure\models.py:7
+#: .\structure\models.py:27 .\structure\models.py:48
+msgid "Name"
+msgstr "Name"
+
+#: .\ads\models.py:21 .\ads\models.py:22
+msgid "Ad detail"
+msgstr "Ad detail"
+
+#: .\config\settings.py:123
 msgid "Uzbek Kiril"
 msgstr "Uzbek"
 
-#: .\config\settings.py:120
+#: .\config\settings.py:124
 msgid "Uzbek"
 msgstr "Uzbek"
 
-#: .\config\settings.py:121
+#: .\config\settings.py:125
 msgid "English"
 msgstr "English"
 
-#: .\config\settings.py:122
+#: .\config\settings.py:126
 msgid "Russian"
 msgstr "Russian"
 
 #: .\education\apps.py:8
 msgid "education"
 msgstr "Education"
-
-#: .\education\models.py:6 .\education\models.py:15
-#: .\science_and_innovation\models.py:24 .\science_and_innovation\models.py:43
-msgid "Name"
-msgstr "Name"
 
 #: .\education\models.py:11 .\education\models.py:12 .\education\models.py:16
 msgid "Faculties"
@@ -178,6 +212,47 @@ msgstr "Final qualifiers"
 msgid "Official documents"
 msgstr "Official documents"
 
+#: .\foreign\models.py:11 .\foreign\models.py:12
+msgid "Preparing foreigners"
+msgstr "Preparing foreigners"
+
+#: .\foreign\models.py:21 .\foreign\models.py:22
+msgid "Foreign Programs"
+msgstr "Foreign Programs"
+
+#: .\foreign\models.py:31 .\foreign\models.py:32
+msgid "Foreign Program detail"
+msgstr "Foreign Program detail"
+
+#: .\foreign\models.py:40 .\foreign\models.py:41
+msgid "The main organization of the CIS"
+msgstr "The main organization of the CIS"
+
+#: .\foreign\models.py:49 .\foreign\models.py:50
+msgid "Cooperation"
+msgstr "Education"
+
+#: .\foreign\models.py:58 .\foreign\models.py:59
+msgid "Graduates"
+msgstr "Graduates"
+
+#: .\foreign\models.py:67 .\foreign\models.py:68
+msgid "Foreign Programs of Students of MPEI"
+msgstr "Foreign Programs of Students of MPEI"
+
+#: .\foreign\models.py:76 .\foreign\models.py:77
+msgid "Information"
+msgstr "Information"
+
+#: .\foreign\models.py:85 .\foreign\models.py:86
+msgid "Global Energy Association"
+msgstr "Global Energy Association"
+
+#: .\foreign\models.py:94 .\foreign\models.py:95
+msgid ""
+"Registration form for participants of the 25th anniversary conference of AMO"
+msgstr "Registration form for participants of the 25th anniversary conference of AMO"
+
 #: .\science_and_innovation\apps.py:8
 msgid "Science and Innovation"
 msgstr "Science and Innovation"
@@ -205,3 +280,67 @@ msgstr "Scientific event detail"
 #: .\science_and_innovation\models.py:59 .\science_and_innovation\models.py:60
 msgid "Scientific events"
 msgstr "Scientific events"
+
+#: .\structure\apps.py:7
+msgid "Structure"
+msgstr "Structure"
+
+#: .\structure\models.py:8 .\structure\models.py:28 .\structure\models.py:49
+msgid "Academic degree"
+msgstr "Academic degree"
+
+#: .\structure\models.py:14 .\structure\models.py:15
+msgid "Scientific Council"
+msgstr "Scientific events"
+
+#: .\structure\models.py:23 .\structure\models.py:24
+msgid "University management"
+msgstr "University management"
+
+#: .\structure\models.py:34 .\structure\models.py:35 .\structure\models.py:39
+msgid "Heads of MPEI Tashkent branch"
+msgstr "Heads of MPEI Tashkent branch"
+
+#: .\structure\models.py:44 .\structure\models.py:45
+msgid "Head detail of MPEI Tashkent branch"
+msgstr "Head detail of MPEI Tashkent branch"
+
+#: .\structure\models.py:50
+msgid "Position"
+msgstr "Position"
+
+#: .\structure\models.py:56 .\structure\models.py:57
+msgid "The board of directors"
+msgstr "The board of directors"
+
+#: .\structure\models.py:65 .\structure\models.py:66
+msgid "Departments and centers of MPEI"
+msgstr "Departments and centers of MPEI"
+
+#: .\structure\models.py:74 .\structure\models.py:75
+msgid "Offices and departments of MPEI"
+msgstr "Offices and departments of MPEI"
+
+#: .\structure\models.py:83 .\structure\models.py:84
+msgid "Public organizations"
+msgstr "Public organizations"
+
+#: .\university_life\apps.py:7
+msgid "University life"
+msgstr "University life"
+
+#: .\university_life\models.py:11 .\university_life\models.py:12
+msgid "Culture"
+msgstr "Culture"
+
+#: .\university_life\models.py:20 .\university_life\models.py:21
+msgid "Health and sport"
+msgstr "Health and sport"
+
+#: .\university_life\models.py:29 .\university_life\models.py:30
+msgid "Campus"
+msgstr "Campus"
+
+#: .\university_life\models.py:38 .\university_life\models.py:39
+msgid "Psychological support at MPEI"
+msgstr "Psychological support at MPEI"
