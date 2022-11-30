@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 22:36+0500\n"
+"POT-Creation-Date: 2022-11-30 17:24+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,19 +150,51 @@ msgstr "Имя"
 msgid "Ad detail"
 msgstr "Детали объявления"
 
-#: .\config\settings.py:123
+#: .\base\models.py:5
+msgid "Sayt logotipi (nom)"
+msgstr ""
+
+#: .\base\models.py:6
+msgid "Sayt logotipi (rasm)"
+msgstr ""
+
+#: .\base\models.py:9 .\base\models.py:10
+msgid "Site logo"
+msgstr ""
+
+#: .\base\models.py:13
+msgid "Title"
+msgstr ""
+
+#: .\base\models.py:14
+msgid "Some text"
+msgstr ""
+
+#: .\base\models.py:15
+#, fuzzy
+#| msgid "image"
+msgid "Image"
+msgstr "Изображение"
+
+#: .\base\models.py:18 .\base\models.py:19
+#, fuzzy
+#| msgid "Additional education"
+msgid "Introduction section"
+msgstr "Дополнительное образование"
+
+#: .\config\settings.py:129
 msgid "Uzbek Kiril"
 msgstr "Узбекский"
 
-#: .\config\settings.py:124
+#: .\config\settings.py:130
 msgid "Uzbek"
 msgstr "Узбекский"
 
-#: .\config\settings.py:125
+#: .\config\settings.py:131
 msgid "English"
 msgstr "Английский"
 
-#: .\config\settings.py:126
+#: .\config\settings.py:132
 msgid "Russian"
 msgstr "Русский"
 
@@ -213,6 +245,10 @@ msgstr "Финальные отборочные"
 #: .\education\models.py:94 .\education\models.py:95
 msgid "Official documents"
 msgstr "Официальные документы"
+
+#: .\foreign\apps.py:7
+msgid "International activity"
+msgstr ""
 
 #: .\foreign\models.py:11 .\foreign\models.py:12
 msgid "Preparing foreigners"

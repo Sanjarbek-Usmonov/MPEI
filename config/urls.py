@@ -24,8 +24,9 @@ urlpatterns = []
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('', include('about_university.urls')),
+    path('about', include('about_university.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
+    path('', include('base.urls')),
     path('edu/', include('education.urls')),
 )
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

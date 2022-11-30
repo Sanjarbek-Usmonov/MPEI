@@ -1,0 +1,557 @@
+{% load static %}
+{% load i18n %}
+{% load mytags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Google Fonts -->
+
+
+    <!-- Fab Icon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/img/logos/mpei.png' %}" />
+    <!-- Fonts Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome/css/all.min.css' %}">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/bootstrap.min.css' %}">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/animate.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/owl.carousel.min.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/slick.css' %}">
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="{% static 'assets/css/vander/flaticon.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>MPEI in Tashkent</title>
+    
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar-section container-fluid d-none d-sm-block">
+        <div class="row">
+            <div class="col-12 nav-container">
+                <!-- Main Nav Start -->
+                <div class="main-nav">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">
+                            {% if site_logo %}
+                            <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
+                            {% else %}
+                            <h2><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> MPEI</h2>
+                            {% endif %}
+                        </a>
+
+                        <!-- For Tablet Screen -> Start -->
+                        <div class="menu-toggler d-block d-xl-none">
+                            <div class="hamburger-menu">
+                                <a href="#">
+                                    <span>Menu</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-menu-items">
+                            <ul class="nav-items">
+                                {% comment %} <li><a href="sign-in.html">Login/Sign up</a></li> {% endcomment %}
+                                <li class="menu-item-has-children">
+                                    <a href="#" class="current-menu-item">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
+                                        <li><a href="index-2.html">E'lonlar</a></li>
+                                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">Universitet haqida</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
+                                        <li><a href="index-2.html">Bog'lanish</a></li>
+                                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
+                                        <li><a href="index-3.html">WEB resurslar</a></li>
+                                        <li><a href="index-3.html">Hamkorlar</a></li>
+                                        <li><a href="index-3.html">Shaxslar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.html#">Ta'lim</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="courses.html">Jadval</a></li>
+                                        <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
+                                        <li><a href="course-detail.html">Trening darajalari</a></li>
+                                        <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
+                                        <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
+                                        <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
+                                        <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
+                                        <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.html#">Ilm-fan va innovatsiya</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
+                                        <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
+                                        <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
+                                        <li><a href="blog-detail.html">Jurnallar</a></li>
+                                        <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                                    </ul>
+                                </li>
+                                    <li class="menu-item-has-children"><a href="404.html">Xalqaro faoliyat</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
+                                            <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="faq.html">Universitet hayoti</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="Pagination-UI.html">Madaniyat</a></li>
+                                            <li><a href="breadcrub.html">Salomatlik va sport</a></li>
+                                            <li><a href="Footer-UI.html">Kampus</a></li>
+                                            <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="index.html#">Tuzilish</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
+                                            <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                                            <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
+                                            <li><a href="Icons.html">Direktorlar kengashi</a></li>
+                                            <li><a href="Tables-UI.html">Institutlar</a></li>
+                                            <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
+                                            <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
+                                            <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                                        </ul>
+                                    </li>
+                                </li>            
+                            </ul>
+                        </div>
+                        <!-- For Tablet Screen -> End -->
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <!-- Use "menu-item-has-no-child" class if there is no sub-menu -->
+                                <li class="menu-item-has-children">
+                                    <a href="#" class="current-menu-item">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
+                                        <li><a href="index-2.html">E'lonlar</a></li>
+                                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Universitet haqida</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
+                                        <li><a href="index-2.html">Bog'lanish</a></li>
+                                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
+                                        <li><a href="index-3.html">WEB resurslar</a></li>
+                                        <li><a href="index-3.html">Hamkorlar</a></li>
+                                        <li><a href="index-3.html">Shaxslar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Ta'lim</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="courses.html">Jadval</a></li>
+                                        <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
+                                        <li><a href="course-detail.html">Trening darajalari</a></li>
+                                        <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
+                                        <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
+                                        <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
+                                        <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
+                                        <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Ilm-fan va innovatsiya</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
+                                        <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
+                                        <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
+                                        <li><a href="blog-detail.html">Jurnallar</a></li>
+                                        <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Qo'shimcha</a>
+                                    <ul class="sub-menu">
+                                        <li class="sub-menu-item-has-children"><a href="#">Xalqaro faoliyat</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
+                                                <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item-has-children"><a href="#">Universitet hayoti</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Pagination-UI.html">Madaniyat</a></li>
+                                                <li><a href="breadcrub.html">Salomatlik va sport</a></li>
+                                                <li><a href="Footer-UI.html">Kampus</a></li>
+                                                <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu-item-has-children"><a href="#">Tuzilish</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
+                                                <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                                                <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
+                                                <li><a href="Icons.html">Direktorlar kengashi</a></li>
+                                                <li><a href="Tables-UI.html">Institutlar</a></li>
+                                                <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
+                                                <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
+                                                <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Side Nav Start -->
+                <div class="side-nav d-flex align-items-center">
+                    {% comment %} <a class="auth" href="sign-in.html">Sign In</a> {% endcomment %}
+                    <div class="location">
+                        {% get_current_language as lang %}
+                        {% get_available_languages as langs %}
+                        <div class="dropdown">
+                            <button class="active" type="button" id="dropdownMenu3" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="flag" src="
+                                {% if lang == 'oz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif lang == 'uz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif lang == 'en' %}
+                                {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                {% elif lang == 'ru' %}
+                                {% static 'assets/img/icons/Flags/russia.png' %}
+                                {% endif %}
+                                " alt="cuntry flag" />
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                {% for l in langs %}
+                                {% if l.0 != lang %}
+                                <a href="{% get_url_lang request l.0 %}">
+                                    <button class="dropdown-item" type="button"><img src="
+                                        {% if l.0 == 'uz' or l.0 == 'oz' %}
+                                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                        {% elif l.0 == 'en' %}
+                                        {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                        {% elif l.0 == 'ru' %}
+                                        {% static 'assets/img/icons/Flags/russia.png' %}
+                                        {% endif %}
+                                        " alt="flag image" class="flag" />
+                                    </button>
+                                </a>
+                                {% endif %}
+                                {% endfor %}                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search search-active">
+                        <i class="flaticon-search"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- search start -->
+            <div class="search-content-wrap main-search-active">
+                <div class="search-content">
+                    <form class="search-form" action="index.html#">
+                        <input type="text" placeholder="Type Something To Search">
+                    </form>
+
+                    <a class="search-close d-flex justify-content-center align-items-center">
+                        <i class="fas fa-times icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar for mobile screen -->
+    <div class="navbar-mobile sticky-bar d-block d-sm-none">
+        <div class="container-fluid">
+            <div class="menu-toggler">
+                <div class="hamburger-menu">
+                    <a href="#">
+                        <span>Menu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="logo">
+                {% if site_logo %}
+                <a href="index.html#">{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="logo" class="img-fluid">{% endif %} {{ site_logo.logo_name }}</a>
+                {% else %}
+                <a><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Logo"> MPEI</a>
+                {% endif %}
+            </div>
+            <div class="divider"></div>
+            <div class="language">
+                <div class="dropdown">
+                    {% get_current_language as lang %}
+                    {% get_available_languages as langs %}
+                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="flag" src="
+                        {% if lang == 'oz' %}
+                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                        {% elif lang == 'uz' %}
+                        {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                        {% elif lang == 'en' %}
+                        {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                        {% elif lang == 'ru' %}
+                        {% static 'assets/img/icons/Flags/russia.png' %}
+                        {% endif %}
+                        " alt="cuntry flag" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        {% for l in langs %}
+                        {% if l.0 != lang %}
+                        <a href="{% get_url_lang request l.0 %}">
+                            <button class="dropdown-item" type="button"><img src="
+                                {% if l.0 == 'uz' or l.0 == 'oz' %}
+                                {% static 'assets/img/icons/Flags/uzbekistan.png' %}
+                                {% elif l.0 == 'en' %}
+                                {% static 'assets/img/icons/Flags/united-kingdom.png' %}
+                                {% elif l.0 == 'ru' %}
+                                {% static 'assets/img/icons/Flags/russia.png' %}
+                                {% endif %}
+                                " alt="flag image" class="flag" />
+                            </button>
+                        </a>
+                        {% endif %}
+                        {% endfor %}                
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search">
+                <i class="flaticon-search"></i>
+            </div>
+        </div>
+
+        <div class="nav-menu-items">
+            <ul class="nav-items">
+                {% comment %} <li><a href="sign-in.html">Login/Sign up</a></li> {% endcomment %}
+                <li class="menu-item-has-children">
+                    <a href="#" class="current-menu-item">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
+                        <li><a href="index-2.html">E'lonlar</a></li>
+                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="about.html">Universitet haqida</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
+                        <li><a href="index-2.html">Bog'lanish</a></li>
+                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
+                        <li><a href="index-3.html">WEB resurslar</a></li>
+                        <li><a href="index-3.html">Hamkorlar</a></li>
+                        <li><a href="index-3.html">Shaxslar</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="index.html#">Ta'lim</a>
+                    <ul class="sub-menu">
+                        <li><a href="courses.html">Jadval</a></li>
+                        <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
+                        <li><a href="course-detail.html">Trening darajalari</a></li>
+                        <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
+                        <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
+                        <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
+                        <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
+                        <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="index.html#">Ilm-fan va innovatsiya</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
+                        <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
+                        <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
+                        <li><a href="blog-detail.html">Jurnallar</a></li>
+                        <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                    </ul>
+                </li>
+                    <li class="menu-item-has-children"><a href="404.html">Xalqaro faoliyat</a>
+                        <ul class="sub-menu">
+                            <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
+                            <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="faq.html">Universitet hayoti</a>
+                        <ul class="sub-menu">
+                            <li><a href="Pagination-UI.html">Madaniyat</a></li>
+                            <li><a href="breadcrub.html">Salomatlik va sport</a></li>
+                            <li><a href="Footer-UI.html">Kampus</a></li>
+                            <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="index.html#">Tuzilish</a>
+                        <ul class="sub-menu">
+                            <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
+                            <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                            <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
+                            <li><a href="Icons.html">Direktorlar kengashi</a></li>
+                            <li><a href="Tables-UI.html">Institutlar</a></li>
+                            <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
+                            <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
+                            <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                        </ul>
+                    </li>
+                </li>            
+            </ul>
+        </div>
+
+        <div class="mobile-search-wrapper">
+            <form>
+                <input type="text" placeholder="Type something to start">
+            </form>
+        </div>
+    </div>
+
+
+    {% block content %}
+
+    {% endblock %} 
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container-fluid">
+            <div class="divider"></div>
+            <div class="row footer-content">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img class="brand-logo" src="{% static 'assets/img/logos/logo_1.png' %}" alt="University Logo">
+                    <div class="contact-links">
+                        <div class="link">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@bantinguniversity.com</p>
+                        </div>
+                        <div class="link">
+                            <i class="fas fa-phone"></i>
+                            <p>+24 45 15 62 129 2</p>
+                        </div>
+                        <div class="link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Ave Manchester, Lorem ipsum St, Rio Danubin</p>
+                        </div>
+                        <div class="link social-icons">
+                            <a target="_blank" href="index.html#"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a target="_blank" href="index.html#"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="index.html#"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="index.html#"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="index.html#">Registration</a></li>
+                        <li><a href="index.html#">Blog</a></li>
+                        <li><a href="index.html#">Popular Courses</a></li>
+                        <li><a href="index.html#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2">
+                    <h5>Information</h5>
+                    <ul>
+                        <li><a href="index.html#">FAQ's</a></li>
+                        <li><a href="index.html#">My account</a></li>
+                        <li><a href="index.html#">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 newsletter">
+                    <h5>Join our newsletter</h5>
+                    <p>We bring the right people together to challenge established thinking and drive
+                        transformation. We
+                        work with our students to build the capabilities that enable organizations to achieve
+                        sustainable advantage.</p>
+                    <form class="d-flex justify-content-between">
+                        <input type="email" placeholder="Enter your email address here">
+                        <button type="submit" class="main-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <div class="container-fluid">
+                <p>© Banting University 2019 All rights reserved. Powered with <span class="fas fa-heart"></span> by
+                    <a href="../../index.html" target="_blank">Zwin</a>.</p>
+            </div>
+            <!-- Scroll Top Start -->
+            <a id="scroll-top" class="d-flex justify-content-center align-items-center">
+                <i class="flaticon-up-arrow"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JQuery Link -->
+    <script src="{% static 'assets/js/vander/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/jquery-migrate-1.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/vander/jQuery.rcounter.js' %}"></script>
+
+    <!-- Google maps geolocation -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
+        async defer></script>
+    <!-- Custom Script -->
+    <script src="{% static 'assets/js/map.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/slider.js' %}"></script>
+    <script src="{% static 'assets/js/toggler.js' %}"></script>
+    
+</body>
+
+</html>

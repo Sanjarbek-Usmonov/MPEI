@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 PROJECT_APPS = [
+    'base',
     'about_university',
     'education',
     'science_and_innovation',
@@ -56,12 +57,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -81,6 +82,11 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.auth",
+    "django.core.context_processors.i18n",
+)
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -149,6 +155,8 @@ TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
@@ -156,10 +164,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "static"
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
+# STATIC_ROOT = BASE_DIR / "static"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 MEDIA_URL = 'media/'
 # MEDIA_ROOT = BASE_DIR / "media"

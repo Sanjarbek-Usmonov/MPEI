@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 22:37+0500\n"
+"POT-Creation-Date: 2022-11-30 17:23+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,19 +147,51 @@ msgstr "Номи"
 msgid "Ad detail"
 msgstr "Эълон тафсилоти"
 
-#: .\config\settings.py:123
+#: .\base\models.py:5
+msgid "Sayt logotipi (nom)"
+msgstr ""
+
+#: .\base\models.py:6
+msgid "Sayt logotipi (rasm)"
+msgstr ""
+
+#: .\base\models.py:9 .\base\models.py:10
+msgid "Site logo"
+msgstr ""
+
+#: .\base\models.py:13
+msgid "Title"
+msgstr ""
+
+#: .\base\models.py:14
+msgid "Some text"
+msgstr ""
+
+#: .\base\models.py:15
+#, fuzzy
+#| msgid "image"
+msgid "Image"
+msgstr "Расм"
+
+#: .\base\models.py:18 .\base\models.py:19
+#, fuzzy
+#| msgid "Additional education"
+msgid "Introduction section"
+msgstr "Қўшимча таълим"
+
+#: .\config\settings.py:129
 msgid "Uzbek Kiril"
 msgstr "Узбек"
 
-#: .\config\settings.py:124
+#: .\config\settings.py:130
 msgid "Uzbek"
 msgstr "Узбек"
 
-#: .\config\settings.py:125
+#: .\config\settings.py:131
 msgid "English"
 msgstr "Инглиз"
 
-#: .\config\settings.py:126
+#: .\config\settings.py:132
 msgid "Russian"
 msgstr "Рус"
 
@@ -211,6 +243,10 @@ msgstr "Якуний саралаш"
 msgid "Official documents"
 msgstr "Расмий ҳужжатлар"
 
+#: .\foreign\apps.py:7
+msgid "International activity"
+msgstr ""
+
 #: .\foreign\models.py:11 .\foreign\models.py:12
 msgid "Preparing foreigners"
 msgstr "Хорижликларни тайёрлаш"
@@ -250,7 +286,8 @@ msgstr "\"Глобал энергия\" ассоциацияси"
 #: .\foreign\models.py:94 .\foreign\models.py:95
 msgid ""
 "Registration form for participants of the 25th anniversary conference of AMO"
-msgstr "АМОнинг 25 йиллик юбилей конференцияси иштирокчилари учун рўйхатдан ўтиш"
+msgstr ""
+"АМОнинг 25 йиллик юбилей конференцияси иштирокчилари учун рўйхатдан ўтиш"
 
 #: .\science_and_innovation\apps.py:8
 msgid "Science and Innovation"
