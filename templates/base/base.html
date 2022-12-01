@@ -61,9 +61,10 @@
                                 <li class="menu-item-has-children">
                                     <a href="#" class="current-menu-item">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
-                                        <li><a href="index-2.html">E'lonlar</a></li>
+                                        <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
+                                        <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                        <li><a href="index-3.html">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -144,9 +145,10 @@
                                 <li class="menu-item-has-children">
                                     <a href="#" class="current-menu-item">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
-                                        <li><a href="index-2.html">E'lonlar</a></li>
+                                        <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
+                                        <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                        <li><a href="index-3.html">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -358,9 +360,10 @@
                 <li class="menu-item-has-children">
                     <a href="#" class="current-menu-item">Home</a>
                     <ul class="sub-menu">
-                        <li><a href="index.html" class="current-menu-item">Bosh sahifa</a></li>
-                        <li><a href="index-2.html">E'lonlar</a></li>
+                        <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
+                        <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                        <li><a href="index-3.html">Yangiliklar</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
@@ -452,57 +455,84 @@
             <div class="divider"></div>
             <div class="row footer-content">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <img class="brand-logo" src="{% static 'assets/img/logos/logo_1.png' %}" alt="University Logo">
+                    {% if site_logo %}
+                        <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
+                        {% else %}
+                        <h2><img class="brand-logo" src="{% static 'assets/img/logos/mpei.png' %}" alt="University Logo"> MPEI</h2>
+                    {% endif %}
                     <div class="contact-links">
+                        {% if contactaddress.email %}
                         <div class="link">
                             <i class="fas fa-envelope"></i>
-                            <p>info@bantinguniversity.com</p>
+                            <p>{{contactaddress.email}}</p>
                         </div>
+                        {% endif %}
+                        {% if contactaddress.phone_number %}
                         <div class="link">
                             <i class="fas fa-phone"></i>
-                            <p>+24 45 15 62 129 2</p>
+                            <p>{{contactaddress.phone_number}}</p>
                         </div>
+                        {% endif %}
+                        {% if contactaddress.address %}
                         <div class="link">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>Ave Manchester, Lorem ipsum St, Rio Danubin</p>
+                            <p>{{contactaddress.address}}</p>
                         </div>
+                        {% endif %}
                         <div class="link social-icons">
-                            <a target="_blank" href="index.html#"><i
-                                    class="fab fa-facebook-square"></i></a>
-                            <a target="_blank" href="index.html#"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="index.html#"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="index.html#"><i
-                                    class="fab fa-linkedin"></i></a>
+                            {% if sociallinks.facebook %}
+                            <a target="_blank" href="{{sociallinks.facebook}}"><i
+                                        class="fab fa-facebook-square"></i></a>
+                            {% endif %}
+                            {% if sociallinks.instagram %}
+                            <a target="_blank" href="{{sociallinks.instagram}}"><i
+                                        class="fab fa-instagram"></i></a>
+                            {% endif %}
+                            {% if sociallinks.twitter %}
+                            <a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a>
+                            {% endif %}
+                            {% if sociallinks.linkedin %}
+                            <a target="_blank" href="{{sociallinks.linkedin}}"><i
+                                        class="fab fa-linkedin"></i></a>
+                            {% endif %}
+                            {% if sociallinks.youtube %}
+                            <a target="_blank" href="{{sociallinks.youtube}}"><i
+                                        class="fab fa-youtube"></i></a>
+                            {% endif %}
+                            {% if sociallinks.telegram %}
+                            <a target="_blank" href="{{sociallinks.telegram}}"><i
+                                        class="fab fa-telegram"></i></a>
+                            {% endif %}
+                            {% if sociallinks.whatsapp %}
+                            <a target="_blank" href="{{sociallinks.whatsapp}}"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
                     <h5>Links</h5>
                     <ul>
-                        <li><a href="index.html#">Registration</a></li>
-                        <li><a href="index.html#">Blog</a></li>
-                        <li><a href="index.html#">Popular Courses</a></li>
-                        <li><a href="index.html#">Events</a></li>
+                        <li><a href="index.html#">MEI bilan tanishuv</a></li>
+                        <li><a href="index.html#">E'lonlar</a></li>
+                        <li><a href="index.html#">Yangiliklar</a></li>
+                        <li><a href="index.html#">Ilmiy tadbirlar</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
                     <h5>Information</h5>
                     <ul>
                         <li><a href="index.html#">FAQ's</a></li>
-                        <li><a href="index.html#">My account</a></li>
-                        <li><a href="index.html#">About us</a></li>
+                        <li><a href="index.html#">Biz bilan aloqa</a></li>
+                        <li><a href="index.html#">Rasmiy ma'lumot</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 newsletter">
                     <h5>Join our newsletter</h5>
-                    <p>We bring the right people together to challenge established thinking and drive
-                        transformation. We
-                        work with our students to build the capabilities that enable organizations to achieve
-                        sustainable advantage.</p>
-                    <form class="d-flex justify-content-between">
-                        <input type="email" placeholder="Enter your email address here">
+                    <p>{{newslettertext.text}}</p>
+                    <form class="d-flex justify-content-between" method="post" action="{% url 'newsletterform' %}">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Enter your email address here">
                         <button type="submit" class="main-btn">Subscribe</button>
                     </form>
                 </div>
@@ -513,8 +543,8 @@
 
         <div class="copyright">
             <div class="container-fluid">
-                <p>© Banting University 2019 All rights reserved. Powered with <span class="fas fa-heart"></span> by
-                    <a href="../../index.html" target="_blank">Zwin</a>.</p>
+                <p>© MPEI in Tashkent 2022 All rights reserved. Powered by
+                    <a href="https://sanjarbekusmonov.netlify.app" target="_blank">Sanjarbek Usmonov</a>.</p>
             </div>
             <!-- Scroll Top Start -->
             <a id="scroll-top" class="d-flex justify-content-center align-items-center">

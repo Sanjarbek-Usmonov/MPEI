@@ -7,30 +7,30 @@
         <div class="social-icon">
             <ul>
                 {% if sociallinks.facebook %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.facebook}}"><i
                             class="fab fa-facebook-square"></i></a></li>
                 {% endif %}
                 {% if sociallinks.instagram %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.instagram}}"><i
                             class="fab fa-instagram"></i></a></li>
                 {% endif %}
                 {% if sociallinks.twitter %}
-                <li><a target="_blank" href="index.html#"><i class="fab fa-twitter"></i></a></li>
+                <li><a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a></li>
                 {% endif %}
                 {% if sociallinks.linkedin %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.linkedin}}"><i
                             class="fab fa-linkedin"></i></a></li>
                 {% endif %}
                 {% if sociallinks.youtube %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.youtube}}"><i
                             class="fab fa-youtube"></i></a></li>
                 {% endif %}
                 {% if sociallinks.telegram %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.telegram}}"><i
                             class="fab fa-telegram"></i></a></li>
                 {% endif %}
                 {% if sociallinks.whatsapp %}
-                <li><a target="_blank" href="index.html#"><i
+                <li><a target="_blank" href="{{sociallinks.whatsapp}}"><i
                             class="fab fa-whatsapp"></i></a></li>
                 {% endif %}
             </ul>
@@ -61,106 +61,41 @@
             <i class="fas fa-envelope icon" id="open-form-popup"></i>
         </div>
         <div class="container">
-            <h2 class="margin-bottom-50">Upcoming events</h2>
-
-            <div class="row event-item-style-1 odd-event">
+            <h2 class="margin-bottom-50">Announcements</h2>
+            {% for n in ads %}
+            <div class="row event-item-style-1 {%if n == ad_odd %} odd-event {% else %} even-event {% endif %}">
                 <div class="col-5 col-lg-2 date">
-                    <h1>12</h1>
-                    <h5>JAN 2019</h5>
+                    <h1>{{n.created_at|date:'d'}}</h1>
+                    <h5>{{n.created_at|date:'M Y'}}</h5>
                 </div>
                 <div class="col-7 col-md-6 col-lg-3 media">
-                    <img src="{% static 'assets/img/University/students/adult-biology-chemical.png' %}" alt="events image"
+                    <img src="{{n.image.url}}" alt="events image"
                         class="img-fluid">
                 </div>
                 <div class="col-12 col-lg-7 details">
-                    <h3>Photography basics: Upcoming project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit odio. Morbi sodales nisi
-                        nec tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu
-                        condimentum est rutrum eget. Vestibulum molestie at sapien sed facilisis.
-                    </p>
+                    <h3>{{n.name}}</h3>
+                    <p>{{n.text}}</p>
                     <div class="d-flex align-items-center event-infos">
                         <div class="info">
                             <i class="fas fa-clock"></i>
-                            <span>All Day</span>
+                            <span>{{n.period}}</span>
                         </div>
                         <div class="info ml-5">
                             <i class="fas fa-users"></i>
-                            <span>207</span>
+                            <span>{{n.count}}</span>
                         </div>
                         <div class="info ml-5">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Port Louis, Mauritius</span>
+                            <span>{{n.area}}</span>
                         </div>
                     </div>
-                    <button class="main-btn">Learn more</button>
+                    <a href="{% url 'ad_detail' pk=n.pk %}"><button class="main-btn">Learn more</button></a>
                 </div>
             </div>
-            <div class="row event-item-style-1 even-event">
-                <div class="col-5 col-lg-2 date">
-                    <h1>21</h1>
-                    <h5>FEB 2019</h5>
-                </div>
-                <div class="col-7 col-md-6 col-lg-3 media">
-                    <img src="{% static 'assets/img/University/students/adult-business.png' %}" alt="events image" class="img-fluid">
-                </div>
-                <div class="col-12 col-lg-7 details">
-                    <h3>Science national competition</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit odio. Morbi sodales nisi
-                        nec tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu
-                        condimentum est rutrum eget. Vestibulum molestie at sapien sed facilisis.
-                    </p>
-                    <div class="d-flex align-items-center event-infos">
-                        <div class="info">
-                            <i class="fas fa-clock"></i>
-                            <span>All Day</span>
-                        </div>
-                        <div class="info ml-5">
-                            <i class="fas fa-users"></i>
-                            <span>207</span>
-                        </div>
-                        <div class="info ml-5">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Port Louis, Mauritius</span>
-                        </div>
-                    </div>
-                    <button class="main-btn">Register now</button>
-                </div>
-
-            </div>
-            <div class="row event-item-style-1 odd-event">
-                <div class="col-5 col-lg-2 date">
-                    <h1>12</h1>
-                    <h5>JAN 2019</h5>
-                </div>
-                <div class="col-7 col-md-6 col-lg-3 media">
-                    <img src="{% static 'assets/img/University/students/adult-biology-chemical.png' %}" alt="events image"
-                        class="img-fluid">
-                </div>
-                <div class="col-12 col-lg-7 details">
-                    <h3>Photography basics: Upcoming project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit odio. Morbi sodales nisi
-                        nec tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu
-                        condimentum est rutrum eget. Vestibulum molestie at sapien sed facilisis.
-                    </p>
-                    <div class="d-flex align-items-center event-infos">
-                        <div class="info">
-                            <i class="fas fa-clock"></i>
-                            <span>All Day</span>
-                        </div>
-                        <div class="info ml-5">
-                            <i class="fas fa-users"></i>
-                            <span>207</span>
-                        </div>
-                        <div class="info ml-5">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Port Louis, Mauritius</span>
-                        </div>
-                    </div>
-                    <button class="main-btn">Learn more</button>
-                </div>
-            </div>
+            {% endfor %}
+            
             <div class="view-more text-center">
-                <a href="event.html">View all</a>
+                <a href="{% url 'ads' %}">View all</a>
             </div>
         </div>
     </section>
@@ -187,12 +122,12 @@
                                     <p class="day">Friday</p>
                                 </div>
                                 <div class="opening opening-time">
-                                    <p class="time">08.00 am</p>
+                                    <p class="time">09.00 am</p>
                                     <div class="divider"></div>
-                                    <p class="time">16.00 pm</p>
+                                    <p class="time">17.00 pm</p>
                                 </div>
                             </div>
-                            <p class="num">+24 45 15 62 129</p>
+                            <p class="num">{{contactaddress.phone_number}}</p>
                         </div>
                     </div>
                 </div>
@@ -202,12 +137,12 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-6 col-lg-8 media">
-                            <div id="location-map"></div>
+                            <div id="location-map"></iframe></div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 content">
                             <h5>Address</h5>
-                            <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
-                            <button class="main-btn">Open in Maps</button>
+                            <p class="address">{{contactaddress.address}}</p>
+                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">Open in Maps</button></a>
                         </div>
                     </div>
                 </div>
@@ -218,8 +153,9 @@
                     <div class="row">
                         <div class="col-12 col-lg-7 content">
                             <h4>You have a question for us?</h4>
-                            <p>leave your message below or email us at info@bantinguniversity.com</p>
-                            <form class="text-left form-style-2">
+                            <p>leave your message below or email us at {{contactaddress.email}}</p>
+                            <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
+                                {% csrf_token %}
                                 <div class="form-group required">
                                     <label for="email">Email address</label>
                                     <input type="email" id="email" class="form-control" name="email"
@@ -227,7 +163,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
-                                    <input type="text" id="message" class="form-control" name="name"
+                                    <input type="text" id="message" class="form-control" name="message"
                                         placeholder="Hello, I wanted to know about this particular course called..." />
                                     <span class="small-text">120 characters left</span>
                                 </div>

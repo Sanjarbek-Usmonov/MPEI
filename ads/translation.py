@@ -3,7 +3,7 @@ from . import models
 
 @translator.register(models.Ads)
 class AdsTranslation(translator.TranslationOptions):
-    fields = ('name',)
+    fields = ('name', 'text', 'area')
 
 @translator.register(models.AdDetail)
 class AdDetailTranslation(translator.TranslationOptions):

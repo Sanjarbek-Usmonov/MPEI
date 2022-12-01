@@ -29,3 +29,20 @@ class IntroSectionAdmin(MyTranslationAdmin):
 class IntroSectionAdmin(admin.ModelAdmin):
     list_display = ['id']
     search_fields = ['id']
+
+@admin.register(ContactAddress)
+class ContactAddressAdmin(MyTranslationAdmin):
+    list_display = ['id', 'phone_number']
+    search_fields = ['id', 'phone_number']
+
+@admin.register(JoinOurNewsletterText)
+class JoinOurNewsletterTextAdmin(MyTranslationAdmin):
+    list_display = ['id', 'text']
+
+@admin.register(JoinOurNewsletterForm)
+class JoinOurNewsletterFormAdmin(admin.ModelAdmin):
+    list_display = ['id', 'email']
+
+@admin.register(ReceivedMessages)
+class ReceivedMessagesAdmin(admin.ModelAdmin):
+    list_display = ['id', 'email']

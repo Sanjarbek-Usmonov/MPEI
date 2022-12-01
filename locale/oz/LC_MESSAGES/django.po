@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 17:23+0500\n"
+"POT-Creation-Date: 2022-12-01 15:55+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,12 +27,13 @@ msgstr "Тизим фойдаланувчилари"
 
 #: .\about_university\models.py:14 .\about_university\models.py:26
 #: .\about_university\models.py:35 .\about_university\models.py:44
-#: .\about_university\models.py:53 .\ads\models.py:16 .\education\models.py:35
-#: .\education\models.py:44 .\education\models.py:53 .\education\models.py:62
-#: .\education\models.py:71 .\education\models.py:80 .\education\models.py:89
-#: .\foreign\models.py:6 .\foreign\models.py:25 .\foreign\models.py:35
-#: .\foreign\models.py:44 .\foreign\models.py:53 .\foreign\models.py:62
-#: .\foreign\models.py:71 .\foreign\models.py:80 .\foreign\models.py:89
+#: .\about_university\models.py:53 .\ads\models.py:7 .\ads\models.py:20
+#: .\base\models.py:45 .\education\models.py:35 .\education\models.py:44
+#: .\education\models.py:53 .\education\models.py:62 .\education\models.py:71
+#: .\education\models.py:80 .\education\models.py:89 .\foreign\models.py:6
+#: .\foreign\models.py:25 .\foreign\models.py:35 .\foreign\models.py:44
+#: .\foreign\models.py:53 .\foreign\models.py:62 .\foreign\models.py:71
+#: .\foreign\models.py:80 .\foreign\models.py:89
 #: .\science_and_innovation\models.py:6 .\science_and_innovation\models.py:15
 #: .\science_and_innovation\models.py:34 .\science_and_innovation\models.py:53
 #: .\structure\models.py:18 .\structure\models.py:38 .\structure\models.py:60
@@ -45,44 +46,44 @@ msgstr "Матн"
 #: .\about_university\models.py:15 .\about_university\models.py:27
 #: .\about_university\models.py:36 .\about_university\models.py:45
 #: .\about_university\models.py:54 .\about_university\models.py:65
-#: .\ads\models.py:8 .\ads\models.py:17 .\education\models.py:7
-#: .\education\models.py:17 .\education\models.py:27 .\education\models.py:36
-#: .\education\models.py:45 .\education\models.py:54 .\education\models.py:63
-#: .\education\models.py:72 .\education\models.py:81 .\education\models.py:90
-#: .\foreign\models.py:7 .\foreign\models.py:17 .\foreign\models.py:27
-#: .\foreign\models.py:36 .\foreign\models.py:45 .\foreign\models.py:54
-#: .\foreign\models.py:63 .\foreign\models.py:72 .\foreign\models.py:81
-#: .\foreign\models.py:90 .\science_and_innovation\models.py:7
-#: .\science_and_innovation\models.py:16 .\science_and_innovation\models.py:26
-#: .\science_and_innovation\models.py:35 .\science_and_innovation\models.py:45
-#: .\science_and_innovation\models.py:55 .\structure\models.py:10
-#: .\structure\models.py:19 .\structure\models.py:30 .\structure\models.py:40
-#: .\structure\models.py:52 .\structure\models.py:61 .\structure\models.py:70
-#: .\structure\models.py:79 .\university_life\models.py:7
-#: .\university_life\models.py:16 .\university_life\models.py:25
-#: .\university_life\models.py:34
+#: .\ads\models.py:12 .\ads\models.py:21 .\base\models.py:53
+#: .\education\models.py:7 .\education\models.py:17 .\education\models.py:27
+#: .\education\models.py:36 .\education\models.py:45 .\education\models.py:54
+#: .\education\models.py:63 .\education\models.py:72 .\education\models.py:81
+#: .\education\models.py:90 .\foreign\models.py:7 .\foreign\models.py:17
+#: .\foreign\models.py:27 .\foreign\models.py:36 .\foreign\models.py:45
+#: .\foreign\models.py:54 .\foreign\models.py:63 .\foreign\models.py:72
+#: .\foreign\models.py:81 .\foreign\models.py:90
+#: .\science_and_innovation\models.py:7 .\science_and_innovation\models.py:16
+#: .\science_and_innovation\models.py:26 .\science_and_innovation\models.py:35
+#: .\science_and_innovation\models.py:45 .\science_and_innovation\models.py:55
+#: .\structure\models.py:10 .\structure\models.py:19 .\structure\models.py:30
+#: .\structure\models.py:40 .\structure\models.py:52 .\structure\models.py:61
+#: .\structure\models.py:70 .\structure\models.py:79
+#: .\university_life\models.py:7 .\university_life\models.py:16
+#: .\university_life\models.py:25 .\university_life\models.py:34
 msgid "created_at"
 msgstr "да ҳосил қилинди"
 
 #: .\about_university\models.py:16 .\about_university\models.py:28
 #: .\about_university\models.py:37 .\about_university\models.py:46
 #: .\about_university\models.py:55 .\about_university\models.py:66
-#: .\ads\models.py:9 .\ads\models.py:18 .\education\models.py:8
-#: .\education\models.py:18 .\education\models.py:28 .\education\models.py:37
-#: .\education\models.py:46 .\education\models.py:55 .\education\models.py:64
-#: .\education\models.py:73 .\education\models.py:82 .\education\models.py:91
-#: .\foreign\models.py:8 .\foreign\models.py:18 .\foreign\models.py:28
-#: .\foreign\models.py:37 .\foreign\models.py:46 .\foreign\models.py:55
-#: .\foreign\models.py:64 .\foreign\models.py:73 .\foreign\models.py:82
-#: .\foreign\models.py:91 .\science_and_innovation\models.py:8
-#: .\science_and_innovation\models.py:17 .\science_and_innovation\models.py:27
-#: .\science_and_innovation\models.py:36 .\science_and_innovation\models.py:46
-#: .\science_and_innovation\models.py:56 .\structure\models.py:11
-#: .\structure\models.py:20 .\structure\models.py:31 .\structure\models.py:41
-#: .\structure\models.py:53 .\structure\models.py:62 .\structure\models.py:71
-#: .\structure\models.py:80 .\university_life\models.py:8
-#: .\university_life\models.py:17 .\university_life\models.py:26
-#: .\university_life\models.py:35
+#: .\ads\models.py:13 .\ads\models.py:22 .\base\models.py:54
+#: .\education\models.py:8 .\education\models.py:18 .\education\models.py:28
+#: .\education\models.py:37 .\education\models.py:46 .\education\models.py:55
+#: .\education\models.py:64 .\education\models.py:73 .\education\models.py:82
+#: .\education\models.py:91 .\foreign\models.py:8 .\foreign\models.py:18
+#: .\foreign\models.py:28 .\foreign\models.py:37 .\foreign\models.py:46
+#: .\foreign\models.py:55 .\foreign\models.py:64 .\foreign\models.py:73
+#: .\foreign\models.py:82 .\foreign\models.py:91
+#: .\science_and_innovation\models.py:8 .\science_and_innovation\models.py:17
+#: .\science_and_innovation\models.py:27 .\science_and_innovation\models.py:36
+#: .\science_and_innovation\models.py:46 .\science_and_innovation\models.py:56
+#: .\structure\models.py:11 .\structure\models.py:20 .\structure\models.py:31
+#: .\structure\models.py:41 .\structure\models.py:53 .\structure\models.py:62
+#: .\structure\models.py:71 .\structure\models.py:80
+#: .\university_life\models.py:8 .\university_life\models.py:17
+#: .\university_life\models.py:26 .\university_life\models.py:35
 msgid "updated_at"
 msgstr "да таҳрирланди"
 
@@ -122,7 +123,7 @@ msgstr "Ҳамкорлар"
 msgid "Degree"
 msgstr "Илмий даража"
 
-#: .\about_university\models.py:64 .\ads\models.py:7 .\foreign\models.py:16
+#: .\about_university\models.py:64 .\ads\models.py:9 .\foreign\models.py:16
 #: .\science_and_innovation\models.py:25 .\science_and_innovation\models.py:44
 #: .\structure\models.py:9 .\structure\models.py:29 .\structure\models.py:51
 msgid "image"
@@ -132,7 +133,7 @@ msgstr "Расм"
 msgid "Honorary people"
 msgstr "Фахрий шахслар"
 
-#: .\ads\apps.py:7 .\ads\models.py:12 .\ads\models.py:13
+#: .\ads\apps.py:7 .\ads\models.py:16 .\ads\models.py:17
 msgid "Ads"
 msgstr "Эълонлар"
 
@@ -143,7 +144,19 @@ msgstr "Эълонлар"
 msgid "Name"
 msgstr "Номи"
 
-#: .\ads\models.py:21 .\ads\models.py:22
+#: .\ads\models.py:8
+msgid "period"
+msgstr ""
+
+#: .\ads\models.py:10
+msgid "count"
+msgstr ""
+
+#: .\ads\models.py:11
+msgid "area"
+msgstr ""
+
+#: .\ads\models.py:25 .\ads\models.py:26
 msgid "Ad detail"
 msgstr "Эълон тафсилоти"
 
@@ -178,6 +191,70 @@ msgstr "Расм"
 #| msgid "Additional education"
 msgid "Introduction section"
 msgstr "Қўшимча таълим"
+
+#: .\base\models.py:22
+msgid "Instagram link"
+msgstr ""
+
+#: .\base\models.py:23
+msgid "Facebook link"
+msgstr ""
+
+#: .\base\models.py:24
+msgid "Youtube link"
+msgstr ""
+
+#: .\base\models.py:25
+msgid "Twitter link"
+msgstr ""
+
+#: .\base\models.py:26
+msgid "LinkedIn link"
+msgstr ""
+
+#: .\base\models.py:27
+msgid "Telegram link"
+msgstr ""
+
+#: .\base\models.py:28
+msgid "Whatsapp link"
+msgstr ""
+
+#: .\base\models.py:31 .\base\models.py:32
+msgid "Social Links"
+msgstr ""
+
+#: .\base\models.py:35 .\base\models.py:52
+#, fuzzy
+#| msgid "Email"
+msgid "email"
+msgstr "Электрон почта"
+
+#: .\base\models.py:36
+msgid "phone_number"
+msgstr ""
+
+#: .\base\models.py:37
+msgid "address"
+msgstr ""
+
+#: .\base\models.py:38
+msgid "address URL"
+msgstr ""
+
+#: .\base\models.py:41 .\base\models.py:42
+#, fuzzy
+#| msgid "Information"
+msgid "Contact Information"
+msgstr "Маълумотлар"
+
+#: .\base\models.py:48 .\base\models.py:49
+msgid "Join our newsletter text"
+msgstr ""
+
+#: .\base\models.py:57 .\base\models.py:58
+msgid "Join our newsletter answers"
+msgstr ""
 
 #: .\config\settings.py:129
 msgid "Uzbek Kiril"
