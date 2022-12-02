@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponseBadRequest
 from ads.models import Ads
+from news.models import News
 
 
 def index(request):
@@ -10,6 +11,10 @@ def index(request):
     introsection = IntroSection.objects.all()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    news = News.objects.all()[::-1][:6]
+    
+    testimonials = Testimonials.objects.all()
+    whychooseus = WhyChooseUs.objects.all().first()
     ads = Ads.objects.all()[::-1][:3]
     ad_odd = ads[1]
     context = {
@@ -19,7 +24,10 @@ def index(request):
         'contactaddress': contactaddress,
         'newslettertext': newslettertext,
         'ads': ads,
+        'news': news,
         'ad_odd': ad_odd,
+        'testimonials': testimonials,
+        'whychooseus': whychooseus,
     }
     return render(request, 'index.html', context=context)
 

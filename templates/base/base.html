@@ -64,7 +64,7 @@
                                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
-                                        <li><a href="index-3.html">Yangiliklar</a></li>
+                                        <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -148,7 +148,7 @@
                                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
-                                        <li><a href="index-3.html">Yangiliklar</a></li>
+                                        <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
@@ -363,7 +363,7 @@
                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                         <li><a href="index-3.html">Biz bilan aloqa</a></li>
-                        <li><a href="index-3.html">Yangiliklar</a></li>
+                        <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
@@ -514,8 +514,8 @@
                     <h5>Links</h5>
                     <ul>
                         <li><a href="index.html#">MEI bilan tanishuv</a></li>
-                        <li><a href="index.html#">E'lonlar</a></li>
-                        <li><a href="index.html#">Yangiliklar</a></li>
+                        <li><a href="{% url 'ads' %}">E'lonlar</a></li>
+                        <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                         <li><a href="index.html#">Ilmiy tadbirlar</a></li>
                     </ul>
                 </div>

@@ -29,6 +29,7 @@ urlpatterns += i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('', include('base.urls')),
     path('edu/', include('education.urls')),
+    path('news/', include('news.urls')),
 )
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -66,3 +66,30 @@ class ReceivedMessages(models.Model):
     class Meta:
         verbose_name = _('Received messages')
         verbose_name_plural = _('Received messages')
+
+class Testimonials(models.Model):
+    fullname = models.CharField(max_length=100, null=True, verbose_name=_('Fullname'))
+    profession = models.CharField(max_length=200, null=True, verbose_name=_('Profession'))
+    text = models.TextField(null=True, verbose_name=_('Text'))
+    image = models.ImageField(upload_to='images', null=True, verbose_name=_('Image'))
+
+    class Meta:
+        verbose_name = _('Testimonials')
+        verbose_name_plural = _('Testimonials')
+
+class WhyChooseUs(models.Model):
+    text = models.TextField(null=True, verbose_name=_('Text'))
+    image = models.ImageField(upload_to='images', null=True, verbose_name=_('Image'))
+    
+    class Meta:
+        verbose_name = _('Why Choose us?')
+        verbose_name_plural = _('Why Choose us?')
+
+class WhyChooseUsReasons(models.Model):
+    whychooseus_id = models.ForeignKey(WhyChooseUs, on_delete=models.CASCADE, null=True, verbose_name=_('whychooseus_id'), related_name='whychooseus')
+    title = models.CharField(max_length=255, null=True, verbose_name=_('Title'))
+    text = models.TextField(null=True, verbose_name=_('Text'))
+
+    class Meta:
+        verbose_name = _('Why Choose us reasons')
+        verbose_name_plural = _('Why Choose us reasons')

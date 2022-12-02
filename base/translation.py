@@ -16,3 +16,15 @@ class ContactAddressTranslation(translator.TranslationOptions):
 @translator.register(models.JoinOurNewsletterText)
 class JoinOurNewsletterTextTranslation(translator.TranslationOptions):
     fields = ('text',)
+
+@translator.register(models.Testimonials)
+class TestimonialsTranslation(translator.TranslationOptions):
+    fields = ('fullname', 'profession', 'text')
+
+@translator.register(models.WhyChooseUs)
+class WhyChooseUsTranslation(translator.TranslationOptions):
+    fields = ('text',)
+
+@translator.register(models.WhyChooseUsReasons)
+class WhyChooseUsReasonsTranslation(translator.TranslationOptions):
+    fields = ('text', 'title')

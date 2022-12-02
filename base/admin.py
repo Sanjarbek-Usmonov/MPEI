@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import *
-from modeltranslation.admin import TranslationAdmin
+from modeltranslation.admin import TranslationAdmin, TranslationStackedInline
 from django.utils.translation import gettext_lazy as _
 
 class MyTranslationAdmin(TranslationAdmin):
@@ -46,3 +46,18 @@ class JoinOurNewsletterFormAdmin(admin.ModelAdmin):
 @admin.register(ReceivedMessages)
 class ReceivedMessagesAdmin(admin.ModelAdmin):
     list_display = ['id', 'email']
+
+@admin.register(Testimonials)
+class ReceivedMessagesAdmin(MyTranslationAdmin):
+    list_display = ['id', 'fullname']
+    search_fields = ['id', 'fullname']
+
+class WhyChooseUsReasonsAdmin(TranslationStackedInline):
+    model = WhyChooseUsReasons
+    extra = 0
+
+@admin.register(WhyChooseUs)
+class WhyChooseUsAdmin(MyTranslationAdmin):
+    list_display = ['id', 'text']
+    search_fields = ['id', 'text']
+    inlines = [WhyChooseUsReasonsAdmin]

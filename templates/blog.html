@@ -1,0 +1,101 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="breadcrub-style-5 section">
+      <div class="container">
+        <div class="heading">
+          <h1>News</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Navigation -->
+    <div class="page-nav-section section hide-md-and-down">
+      <div class="container">
+        <ul class="d-flex align-items-center">
+          <li><a href="{% url 'news' %}" class="active">All</a></li>
+          <li><a href="{% url 'ads' %}">Ennouncements</a></li>
+          <li class="d-flex align-items-center search-input-group">
+            <input type="text" placeholder="Type something to search" />
+            <i class="flaticon-search"></i>            
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Blog Area -->
+    <div class="blogs-area-section section">
+      <div class="container-fluid">
+        {% for new in news %}
+        {% if forloop.first %}
+        <div class="row">
+          {% endif %}
+            <div class="col-6 col-lg-6 blog-content">
+            <!-- 2 column blog -->
+                <div class="row blog blog-sum-item-style-1">
+                    <div class="col-12 col-md-5 media">
+                      <img
+                        src="{{new.image.url}}"
+                        alt="blog img"
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col-12 col-md-5 content">
+                        <h4>{{new.title}}</h4>
+                        <h6 class="date">{{new.created_at|date:'d M, Y'}}</h6>
+                        <div class="reacts">
+                              <div class="react">
+                                  <i class="fas fa-eye"></i>
+                                  <p>{{new.count}} views</p>
+                              </div>
+                        </div>
+                        <p>{{new.text|truncatechars:200}}</p>
+                        <a class="small-btn" href="#">Read it</a>
+                    </div>
+                </div>
+            </div>
+        {% if forloop.counter|divisibleby:2 %}
+        </div>
+        <div class="row">
+        {% endif %}
+        {% if forloop.last %}
+        </div>
+        {% endif %}
+        {% endfor %}
+
+
+        <!-- Pagination -->
+        {% if news.has_other_pages %}
+        <div class="col-12 col-lg-12 blog-content">
+          <div class="pagination-style-1">
+            {% if news.has_previous %}
+            <a class="prev" role="button" data-slide="prev" href="?page={{ news.previous_page_number }}">
+              <i class="flaticon-back"></i>
+            </a>
+            {% endif %}
+            <div class="page-num">
+              {% for i in news.paginator.page_range %}
+              {% if news.number == i %}
+              <a class="current">{{ news.current_page_number }}</a>
+              {% endif %}
+              {% endfor %}
+              {% if news.has_previous %}
+              <a class="total">{{ news.previous_page_number }}</a>
+              {% endif %}
+              {% if news.has_next %}
+              <a class="total">{{ news.next_page_number }}</a>
+              {% endif %}
+            </div>
+            {% if news.has_next %}
+            <a class="next" role="button" data-slide="next" href="?page={{ news.next_page_number  }}">
+              <i class="flaticon-next"></i>                
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %} 
+      </div>
+    </div>
+
+ {% endblock %}

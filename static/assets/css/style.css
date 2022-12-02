@@ -3565,7 +3565,7 @@ span {
   font-family: var(--heading-font);
   margin-bottom: 35px;
   position: relative;
-  width: 42vw;
+  width: 32vw;
 }
 .header_section .single-header-item .content-area .boxed-btn {
   display: inline-block;

@@ -40,10 +40,14 @@ def ad_detail(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
+    ad_count = Ads.objects.get(pk=pk)
+    ad_count.count += 1
+    ad_count.save()
     try:
         ad = AdDetail.objects.get(ad_id=pk)
     except Exception as e:
         ad = _('Object does not find! Sorry.')
+    
     context = {
         'site_logo': site_logo,
         'sociallinks': sociallinks,

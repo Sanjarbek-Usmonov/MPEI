@@ -195,116 +195,27 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-6 text-center">
                                 <div class="testimonial-thumbnail-slider">
+                                    {% for t in testimonials %}
                                     <div class="single-testimonial-thumb">
                                         <div class="img-wrap">
                                             <div class="img"
-                                                style="background-image: url({% static 'assets/img/profiles/student_4.png' %})"></div>
+                                                style="background-image: url({{t.image.url}})"></div>
                                         </div>
                                     </div>
-                                    <div class="single-testimonial-thumb">
-                                        <div class="img-wrap">
-                                            <div class="img"
-                                                style="background-image: url({% static 'assets/img/profiles/student_5.png' %})">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial-thumb">
-                                        <div class="img-wrap">
-                                            <div class="img"
-                                                style="background-image: url({% static 'assets/img/profiles/student_3.png' %})">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial-thumb">
-                                        <div class="img-wrap">
-                                            <div class="img"
-                                                style="background-image: url({% static 'assets/img/profiles/student_2.png' %})">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-testimonial-thumb">
-                                        <div class="img-wrap">
-                                            <div class="img"
-                                                style="background-image: url({% static 'assets/img/profiles/student_1.png' %})">
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
                         <div class="testimonial-description-slider">
+                            {% for t in testimonials %}
                             <div class="single-testimonial-item">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus augue nibh, at
-                                    ullamcorper
-                                    orci ullamcorper ut. Integer vehicula iaculis risus, non consequat eros tincidunt
-                                    ac. Morbi a
-                                    aliquam tortor. Nam convallis vestibulum nisi, sit amet fermentum libero scelerisque
-                                    id.
-                                    Integer
-                                    iaculis mollis justo, sed interdum ligula auctor in.</p>
+                                <p>{{t.text}}</p>
                                 <div class="author-meta">
-                                    <h4 class="title"><strong>William Edwards</strong><span class="divider"> | </span><span
-                                            class="designation">BA Hons Project
-                                            Management</span></h4>
+                                    <h4 class="title"><strong>{{t.fullname}}</strong><span class="divider"> | </span><span
+                                            class="designation">{{t.profession}}</span></h4>
                                 </div>
                             </div>
-                            <div class="single-testimonial-item">
-                                <p>2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus augue nibh, at
-                                    ullamcorper orci ullamcorper ut. Integer vehicula iaculis risus, non consequat eros
-                                    tincidunt ac. Morbi a aliquam tortor. Nam convallis vestibulum nisi, sit amet
-                                    fermentum libero scelerisque id. Integer iaculis mollis justo, sed interdum ligula
-                                    auctor in.</p>
-                                <div class="author-meta">
-                                    <h4 class="title"><strong>Nichol sara</strong><span class="divider"> | </span><span
-                                            class="designation">Computer Science</span></h4>
-                                </div>
-                            </div>
-                            <div class="single-testimonial-item">
-                                <p>orper ut. Integer vehicula iaculis risus, non consequat eros
-                                    tincidunt ac. Morbi a aliquam tortor. Nam convallis vestibulum nisi, sit amet
-                                    fermentum libero scelerisque id. Integer iaculis mollis justo, sed interdum ligula
-                                    auctor in.</p>
-                                <div class="author-meta">
-                                    <h4 class="title"><strong>Jane Doson</strong><span class="divider"> | </span><span
-                                            class="designation">BA Hons English</span></h4>
-                                </div>
-                            </div>
-                            <div class="single-testimonial-item">
-                                <p>4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus augue nibh, at
-                                    ullamcorper orci ullamcorper ut. Integer vehicula iaculis risus, non consequat eros
-                                    tincidunt ac. Morbi a aliquam tortor. Nam convallis vestibulum nisi, sit amet
-                                    fermentum libero scelerisque id. Integer iaculis mollis justo, sed interdum ligula
-                                    auctor in.</p>
-                                <div class="author-meta">
-                                    <h4 class="title"><strong>William Edwards</strong><span class="divider"> | </span><span
-                                            class="designation">BA Hons Project
-                                            Management</span></h4>
-                                </div>
-                            </div>
-                            <div class="single-testimonial-item">
-                                <p>5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus augue nibh, at
-                                    ullamcorper orci ullamcorper ut. Integer vehicula iaculis risus, non consequat eros
-                                    tincidunt ac. Morbi a aliquam tortor. Nam convallis vestibulum nisi, sit amet
-                                    fermentum libero scelerisque id. Integer iaculis mollis justo, sed interdum ligula
-                                    auctor in.</p>
-                                <div class="author-meta">
-                                    <h4 class="title"><strong>William Edwards</strong><span class="divider"> | </span><span
-                                            class="designation">BA Hons Project
-                                            Management</span></h4>
-                                </div>
-                            </div>
-                            <div class="single-testimonial-item">
-                                <p>6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus augue nibh, at
-                                    ullamcorper orci ullamcorper ut. Integer vehicula iaculis risus, non consequat eros
-                                    tincidunt ac. Morbi a aliquam tortor. Nam convallis vestibulum nisi, sit amet
-                                    fermentum libero scelerisque id. Integer iaculis mollis justo, sed interdum ligula
-                                    auctor in.</p>
-                                <div class="author-meta">
-                                    <h4 class="title"><strong>Michel Hamson </strong><span class="divider"> | </span><span
-                                            class="designation">Masters in
-                                            Economics</span></h4>
-                                </div>
+                            {% endfor %}
                             </div>
                         </div>
                     </div>
@@ -317,126 +228,76 @@
     <section class="features-section section">
         <div class="container text-center">
             <h2>Why choose us?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe qui iusto sapiente laudantium
-                inventore
-                vel aliquam iste culpa id optio, labore, ut illo praesentium voluptatibus doloremque atque autem.
-                Facilis debitis perspiciatis rerum, reiciendis, cumque minus temporibus, magnam atque quam similique
-                nisi dolores? Optio earum quis quam perferendis culpa, dolor veritatis!</p>
+            <p>{{whychooseus.text}}</p>
             <div class="row d-flex justify-content-between">
                 <div class="col-12 col-lg-6 media">
-                    <img src="{% static 'assets/img/University/students/naassom-azevedo.png' %}" alt="feature image" class="img-fluid">
+                    <img src="{{whychooseus.image.url}}" alt="feature image" class="img-fluid">
                 </div>
                 <div class="col-12 col-lg-6 content">
                     <div class="accordion-wrapper">
                         <div id="accordion">
+                            {% for whychooseusreason in whychooseus.whychooseus.all %}
                             <div class="card">
-                                <div class="card-header" id="headingOne">
+                                <div class="card-header" id="
+                                {% if forloop.counter == 1 %}headingOne
+                                {% elif forloop.counter == 2 %}headingTwo
+                                {% elif forloop.counter == 3 %}headingThree
+                                {% elif forloop.counter == 4 %}headingFour
+                                {% elif forloop.counter == 5 %}headingFive
+                                {% elif forloop.counter == 6 %}headingSix
+                                {% elif forloop.counter == 7 %}headingSeven
+                                {% elif forloop.counter == 8 %}headingEight
+                                {% else %}headingOne{%endif%}
+                                ">
                                     <h5 class="mb-0">
-                                        <a role="button" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            Learn at your own pace
+                                        <a {% if forloop.counter != 1 %}class="collapsed"{% endif %} role="button" data-toggle="collapse" data-target="
+                                        {% if forloop.counter == 1 %}#collapseOne
+                                        {% elif forloop.counter == 2 %}#collapseTwo
+                                        {% elif forloop.counter == 3 %}#collapseThree
+                                        {% elif forloop.counter == 4 %}#collapseFour
+                                        {% elif forloop.counter == 5 %}#collapseFive
+                                        {% elif forloop.counter == 6 %}#collapseSix
+                                        {% elif forloop.counter == 7 %}#collapseSeven
+                                        {% elif forloop.counter == 8 %}#collapseEight
+                                        {% else %}#collapseOne{%endif%}" aria-expanded="{% if forloop.counter == 1 %}True{% else %}False{% endif %}" aria-controls="collapseOne"
+                                            {% if forloop.counter == 1 %}aria-controls="collapseOne"
+                                            {% elif forloop.counter == 2 %}aria-controls="collapseTwo"
+                                            {% elif forloop.counter == 3 %}aria-controls="collapseThree"
+                                            {% elif forloop.counter == 4 %}aria-controls="collapseFour"
+                                            {% elif forloop.counter == 5 %}aria-controls="collapseFive"
+                                            {% elif forloop.counter == 6 %}aria-controls="collapseSix"
+                                            {% elif forloop.counter == 7 %}aria-controls="collapseSeven"
+                                            {% elif forloop.counter == 8 %}aria-controls="collapseEight"
+                                            {% else %}aria-controls="collapseTwo"{%endif%}> 
+                                            {{whychooseusreason.title}}
                                         </a>
                                     </h5>
                                 </div>
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                <div 
+                                    {% if forloop.counter == 1 %}id="collapseOne"
+                                    {% elif forloop.counter == 2 %}id="collapseTwo"
+                                    {% elif forloop.counter == 3 %}id="collapseThree"
+                                    {% elif forloop.counter == 4 %}id="collapseFour"
+                                    {% elif forloop.counter == 5 %}id="collapseFive"
+                                    {% elif forloop.counter == 6 %}id="collapseSix"
+                                    {% elif forloop.counter == 7 %}id="collapseSeven"
+                                    {% elif forloop.counter == 8 %}id="collapseEight"
+                                    {% else %}id="collapseTwo"{%endif%}
+                                    class="collapse {% if forloop.counter == 1 %}show{%endif%}"
+                                    {% if forloop.counter == 1 %}aria-labelledby="headingOne"
+                                    {% elif forloop.counter == 2 %}aria-labelledby="headingTwo"
+                                    {% elif forloop.counter == 3 %}aria-labelledby="headingThree"
+                                    {% elif forloop.counter == 4 %}aria-labelledby="headingFour"
+                                    {% elif forloop.counter == 5 %}aria-labelledby="headingFive"
+                                    {% elif forloop.counter == 6 %}aria-labelledby="headingSix"
+                                    {% elif forloop.counter == 7 %}aria-labelledby="headingSeven"
+                                    {% elif forloop.counter == 8 %}aria-labelledby="headingEight"
+                                    {% else %}aria-labelledby="headingOne"{%endif%}
                                     data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit odio. Morbi
-                                        sodales nisi nec tortor commodo
-                                    </div>
+                                    <div class="card-body">{{whychooseusreason.text}}</div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-target="#collapseTwo" aria-expanded="false"
-                                            aria-controls="collapseTwo">
-                                            Online instructors easily accessible
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit itaque, blanditiis
-                                        animi dignissimos distinctio temporibus?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            Get certified awards
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit itaque, blanditiis
-                                        animi dignissimos distinctio temporibus?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingFour">
-                                    <h5 class="mb-0">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-target="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseFour">
-                                            More than 300+ courses available
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit itaque, blanditiis
-                                        animi dignissimos distinctio temporibus?
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-header" id="headingFive">
-                                    <h5 class="mb-0">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-target="#collapseFive" aria-expanded="false"
-                                            aria-controls="collapseFive">
-                                            Certified lecturers
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit itaque, blanditiis
-                                        animi dignissimos distinctio temporibus?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" id="headingSix">
-                                    <h5 class="mb-0">
-                                        <a class="collapsed" role="button" data-toggle="collapse"
-                                            data-target="#collapseSix" aria-expanded="false"
-                                            aria-controls="collapseSix">
-                                            Online instructors easily accessible
-                                        </a>
-                                    </h5>
-                                </div>
-                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit itaque, blanditiis
-                                        animi dignissimos distinctio temporibus?
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -448,78 +309,30 @@
     <!-- Blog Section -->
     <section class="blog-section section">
         <div class="container">
-            <h2 class="text-left">From the Blog</h2>
+            <h2 class="text-left">From the News</h2>
             <div class="blog-carousel-wrap">
                 <div class="blog-carousel-controls hide-md-and-down">
                     <div class="dots"></div>
                 </div>
                 <div class="blog-carousel-01">
+                    {% for new in news %}
                     <div class="single-blog-grid-item-01">
                         <div class="thumb">
-                            <img src="{% static 'assets/img/University/students/adolescent-adorable-alone.png' %}" alt="blog image">
+                            <img src="{{new.image.url}}" alt="blog image">
                             <div class="hover">
                                 <a href="index.html#" class="readmore"><i class="fas fa-link"></i></a>
                             </div>
                         </div>
                         <div class="content">
-                            <span class="time">Lorem Ipsum</span>
-                            <h4 class="title"><a href="index.html#">Top 5 apps to download for <br>time management</a></h4>
+                            <span class="time">{{new.created_at|date:'d F Y'}}</span>
+                            <h4 class="title"><a href="index.html#">{{new.title}}</a></h4>
                         </div>
                     </div>
-                    <div class="single-blog-grid-item-01">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/University/students/backpacks-college-students.png' %}" alt="blog image">
-                            <div class="hover">
-                                <a href="index.html#" class="readmore"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="time">Lorem Ipsum</span>
-                            <h4 class="title"><a href="index.html#">The secret to a successful a revision session with your
-                                    friends for final exams</a></h4>
-                        </div>
-                    </div>
-                    <div class="single-blog-grid-item-01">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/University/students/adolescent-adorable-alone.png' %}" alt="blog image">
-                            <div class="hover">
-                                <a href="index.html#" class="readmore"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="time">Lorem Ipsum</span>
-                            <h4 class="title"><a href="index.html#">Top 5 apps to download for <br>time management</a></h4>
-                        </div>
-                    </div>
-                    <div class="single-blog-grid-item-01">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/University/students/backpacks-college-students.png' %}" alt="blog image">
-                            <div class="hover">
-                                <a href="index.html#" class="readmore"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="time">Lorem Ipsum</span>
-                            <h4 class="title"><a href="index.html#">Top 5 apps to download for <br>time management</a></h4>
-                        </div>
-                    </div>
-                    <div class="single-blog-grid-item-01">
-                        <div class="thumb">
-                            <img src="{% static 'assets/img/University/students/backpacks-college-students.png' %}" alt="blog image">
-                            <div class="hover">
-                                <a href="index.html#" class="readmore"><i class="fas fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <span class="time">Lorem Ipsum</span>
-                            <h4 class="title"><a href="index.html#">The secret to a successful a revision session with your
-                                    friends for final exams</a></h4>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                <h1 class="rotated-text hide-md-and-down">BLOG</h1>
+                <h1 class="rotated-text hide-md-and-down">NEWS</h1>
             </div>
-            <button class="main-btn">Read our blogs</button>
+            <button class="main-btn">Read our news</button>
         </div>
     </section>
 
@@ -528,7 +341,7 @@
         <div class="container">
             <div id="counters" class="row text-center">
                 <div class="col-12 col-md-4">
-                    <h1><span class="students-counter count-number">32,980</span></h1>
+                    <h1><span class="students-counter count-number">6,980</span></h1>
                     <h4>Global students</h4>
                 </div>
                 <div class="col-12 col-md-4">

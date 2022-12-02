@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-01 15:55+0500\n"
+"POT-Creation-Date: 2022-12-02 10:09+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,8 +27,9 @@ msgstr "Тизим фойдаланувчилари"
 
 #: .\about_university\models.py:14 .\about_university\models.py:26
 #: .\about_university\models.py:35 .\about_university\models.py:44
-#: .\about_university\models.py:53 .\ads\models.py:7 .\ads\models.py:20
-#: .\base\models.py:45 .\education\models.py:35 .\education\models.py:44
+#: .\about_university\models.py:53 .\ads\models.py:7 .\ads\models.py:23
+#: .\base\models.py:45 .\base\models.py:73 .\base\models.py:81
+#: .\base\models.py:90 .\education\models.py:35 .\education\models.py:44
 #: .\education\models.py:53 .\education\models.py:62 .\education\models.py:71
 #: .\education\models.py:80 .\education\models.py:89 .\foreign\models.py:6
 #: .\foreign\models.py:25 .\foreign\models.py:35 .\foreign\models.py:44
@@ -46,14 +47,14 @@ msgstr "Матн"
 #: .\about_university\models.py:15 .\about_university\models.py:27
 #: .\about_university\models.py:36 .\about_university\models.py:45
 #: .\about_university\models.py:54 .\about_university\models.py:65
-#: .\ads\models.py:12 .\ads\models.py:21 .\base\models.py:53
-#: .\education\models.py:7 .\education\models.py:17 .\education\models.py:27
-#: .\education\models.py:36 .\education\models.py:45 .\education\models.py:54
-#: .\education\models.py:63 .\education\models.py:72 .\education\models.py:81
-#: .\education\models.py:90 .\foreign\models.py:7 .\foreign\models.py:17
-#: .\foreign\models.py:27 .\foreign\models.py:36 .\foreign\models.py:45
-#: .\foreign\models.py:54 .\foreign\models.py:63 .\foreign\models.py:72
-#: .\foreign\models.py:81 .\foreign\models.py:90
+#: .\ads\models.py:12 .\ads\models.py:25 .\base\models.py:53
+#: .\base\models.py:63 .\education\models.py:7 .\education\models.py:17
+#: .\education\models.py:27 .\education\models.py:36 .\education\models.py:45
+#: .\education\models.py:54 .\education\models.py:63 .\education\models.py:72
+#: .\education\models.py:81 .\education\models.py:90 .\foreign\models.py:7
+#: .\foreign\models.py:17 .\foreign\models.py:27 .\foreign\models.py:36
+#: .\foreign\models.py:45 .\foreign\models.py:54 .\foreign\models.py:63
+#: .\foreign\models.py:72 .\foreign\models.py:81 .\foreign\models.py:90
 #: .\science_and_innovation\models.py:7 .\science_and_innovation\models.py:16
 #: .\science_and_innovation\models.py:26 .\science_and_innovation\models.py:35
 #: .\science_and_innovation\models.py:45 .\science_and_innovation\models.py:55
@@ -68,14 +69,14 @@ msgstr "да ҳосил қилинди"
 #: .\about_university\models.py:16 .\about_university\models.py:28
 #: .\about_university\models.py:37 .\about_university\models.py:46
 #: .\about_university\models.py:55 .\about_university\models.py:66
-#: .\ads\models.py:13 .\ads\models.py:22 .\base\models.py:54
-#: .\education\models.py:8 .\education\models.py:18 .\education\models.py:28
-#: .\education\models.py:37 .\education\models.py:46 .\education\models.py:55
-#: .\education\models.py:64 .\education\models.py:73 .\education\models.py:82
-#: .\education\models.py:91 .\foreign\models.py:8 .\foreign\models.py:18
-#: .\foreign\models.py:28 .\foreign\models.py:37 .\foreign\models.py:46
-#: .\foreign\models.py:55 .\foreign\models.py:64 .\foreign\models.py:73
-#: .\foreign\models.py:82 .\foreign\models.py:91
+#: .\ads\models.py:13 .\ads\models.py:26 .\base\models.py:54
+#: .\base\models.py:64 .\education\models.py:8 .\education\models.py:18
+#: .\education\models.py:28 .\education\models.py:37 .\education\models.py:46
+#: .\education\models.py:55 .\education\models.py:64 .\education\models.py:73
+#: .\education\models.py:82 .\education\models.py:91 .\foreign\models.py:8
+#: .\foreign\models.py:18 .\foreign\models.py:28 .\foreign\models.py:37
+#: .\foreign\models.py:46 .\foreign\models.py:55 .\foreign\models.py:64
+#: .\foreign\models.py:73 .\foreign\models.py:82 .\foreign\models.py:91
 #: .\science_and_innovation\models.py:8 .\science_and_innovation\models.py:17
 #: .\science_and_innovation\models.py:27 .\science_and_innovation\models.py:36
 #: .\science_and_innovation\models.py:46 .\science_and_innovation\models.py:56
@@ -133,7 +134,7 @@ msgstr "Расм"
 msgid "Honorary people"
 msgstr "Фахрий шахслар"
 
-#: .\ads\apps.py:7 .\ads\models.py:16 .\ads\models.py:17
+#: .\ads\apps.py:7 .\ads\models.py:19 .\ads\models.py:20
 msgid "Ads"
 msgstr "Эълонлар"
 
@@ -156,9 +157,19 @@ msgstr ""
 msgid "area"
 msgstr ""
 
-#: .\ads\models.py:25 .\ads\models.py:26
+#: .\ads\models.py:24
+#, fuzzy
+#| msgid "Ads"
+msgid "Ad"
+msgstr "Эълонлар"
+
+#: .\ads\models.py:29 .\ads\models.py:30
 msgid "Ad detail"
 msgstr "Эълон тафсилоти"
+
+#: .\ads\views.py:49
+msgid "Object does not find! Sorry."
+msgstr ""
 
 #: .\base\models.py:5
 msgid "Sayt logotipi (nom)"
@@ -172,7 +183,7 @@ msgstr ""
 msgid "Site logo"
 msgstr ""
 
-#: .\base\models.py:13
+#: .\base\models.py:13 .\base\models.py:89
 msgid "Title"
 msgstr ""
 
@@ -180,7 +191,7 @@ msgstr ""
 msgid "Some text"
 msgstr ""
 
-#: .\base\models.py:15
+#: .\base\models.py:15 .\base\models.py:74 .\base\models.py:82
 #, fuzzy
 #| msgid "image"
 msgid "Image"
@@ -224,7 +235,7 @@ msgstr ""
 msgid "Social Links"
 msgstr ""
 
-#: .\base\models.py:35 .\base\models.py:52
+#: .\base\models.py:35 .\base\models.py:52 .\base\models.py:61
 #, fuzzy
 #| msgid "Email"
 msgid "email"
@@ -254,6 +265,36 @@ msgstr ""
 
 #: .\base\models.py:57 .\base\models.py:58
 msgid "Join our newsletter answers"
+msgstr ""
+
+#: .\base\models.py:62
+msgid "Message"
+msgstr ""
+
+#: .\base\models.py:67 .\base\models.py:68
+msgid "Received messages"
+msgstr ""
+
+#: .\base\models.py:71
+#, fuzzy
+#| msgid "Full name"
+msgid "Fullname"
+msgstr "Тўлиқ исми шариф"
+
+#: .\base\models.py:72
+msgid "Profession"
+msgstr ""
+
+#: .\base\models.py:77 .\base\models.py:78
+msgid "Testimonials"
+msgstr ""
+
+#: .\base\models.py:85 .\base\models.py:86
+msgid "Why Choose us?"
+msgstr ""
+
+#: .\base\models.py:93 .\base\models.py:94
+msgid "Why Choose us reasons"
 msgstr ""
 
 #: .\config\settings.py:129

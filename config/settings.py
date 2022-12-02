@@ -39,6 +39,7 @@ PROJECT_APPS = [
     'university_life',
     'structure',
     'ads',
+    'news',
     'ckeditor',
     'ckeditor_uploader',
 ]
