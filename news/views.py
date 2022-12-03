@@ -11,7 +11,12 @@ def newsview(request):
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
 
-    newss = News.objects.all()[::-1]
+    if request.method == 'POST' and 'search-ad' in request.POST:
+        newss = News.objects.filter(
+            Q(title__icontains=request.POST['search-ad'])
+        )[::-1]
+    else:
+        newss = News.objects.all()[::-1]
     page = request.GET.get('page', 1)
     paginator = Paginator(newss, 10)
     try:
@@ -28,3 +33,26 @@ def newsview(request):
         'newslettertext': newslettertext,
     }
     return render(request, 'blog.html', context=context)
+
+def news_detailview(request, pk):
+    site_logo = SiteLogo.objects.all().first()
+    sociallinks = SocialLinks.objects.all().first()
+    contactaddress = ContactAddress.objects.all().first()
+    newslettertext = JoinOurNewsletterText.objects.all().first()
+
+    news = News.objects.all()[::-1][:6]
+    try:
+        new = News.objects.get(pk=pk)
+        new.count += 1
+        new.save()
+    except Exception as e:
+        new['title'] = _('Object does not find! Sorry.')
+    context = {
+        'new': new,
+        'news': news,
+        'site_logo': site_logo,
+        'sociallinks': sociallinks,
+        'contactaddress': contactaddress,
+        'newslettertext': newslettertext,
+    }
+    return render(request, 'blog-detail.html', context=context)

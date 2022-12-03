@@ -7,7 +7,7 @@ class SiteLogoTranslation(translator.TranslationOptions):
 
 @translator.register(models.IntroSection)
 class IntroSectionTranslation(translator.TranslationOptions):
-    fields = ('title', 'some_text')
+    fields = ('title', 'title2', 'title3', 'title4')
 
 @translator.register(models.ContactAddress)
 class ContactAddressTranslation(translator.TranslationOptions):

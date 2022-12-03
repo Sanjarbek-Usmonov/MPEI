@@ -63,25 +63,24 @@
                                     <ul class="sub-menu">
                                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
-                                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                        <li><a href="{% url 'contact' %}">Biz bilan aloqa</a></li>
                                         <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="about.html">Universitet haqida</a>
+                                    <a href="#">Universitet haqida</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
-                                        <li><a href="index-2.html">Bog'lanish</a></li>
-                                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
-                                        <li><a href="index-3.html">WEB resurslar</a></li>
-                                        <li><a href="index-3.html">Hamkorlar</a></li>
-                                        <li><a href="index-3.html">Shaxslar</a></li>
+                                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">MEI bilan tanishuv</a></li>
+                                        <li><a href="{% url 'about_university' slug='official-information' %}">Rasmiy ma'lumot</a></li>
+                                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">WEB resurslar</a></li>
+                                        <li><a href="{% url 'about_university' slug='partners' %}">Hamkorlar</a></li>
+                                        <li><a href="{% url 'about_university' slug='honorable-p' %}">Shaxslar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="index.html#">Ta'lim</a>
                                     <ul class="sub-menu">
-                                        <li><a href="courses.html">Jadval</a></li>
+                                        <li><a href="{% url 'schedule' %}">Jadval</a></li>
                                         <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
                                         <li><a href="course-detail.html">Trening darajalari</a></li>
                                         <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
@@ -147,25 +146,24 @@
                                     <ul class="sub-menu">
                                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
-                                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                                        <li><a href="{% url 'contact' %}">Biz bilan aloqa</a></li>
                                         <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Universitet haqida</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
-                                        <li><a href="index-2.html">Bog'lanish</a></li>
-                                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
-                                        <li><a href="index-3.html">WEB resurslar</a></li>
-                                        <li><a href="index-3.html">Hamkorlar</a></li>
-                                        <li><a href="index-3.html">Shaxslar</a></li>
+                                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">MEI bilan tanishuv</a></li>
+                                        <li><a href="{% url 'about_university' slug='official-information' %}">Rasmiy ma'lumot</a></li>
+                                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">WEB resurslar</a></li>
+                                        <li><a href="{% url 'about_university' slug='partners' %}">Hamkorlar</a></li>
+                                        <li><a href="{% url 'about_university' slug='honorable-p' %}">Shaxslar</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Ta'lim</a>
                                     <ul class="sub-menu">
-                                        <li><a href="courses.html">Jadval</a></li>
+                                        <li><a href="{% url 'schedule' %}">Jadval</a></li>
                                         <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
                                         <li><a href="course-detail.html">Trening darajalari</a></li>
                                         <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
@@ -362,25 +360,24 @@
                     <ul class="sub-menu">
                         <li><a href="/" class="current-menu-item">Bosh sahifa</a></li>
                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
-                        <li><a href="index-3.html">Biz bilan aloqa</a></li>
+                        <li><a href="{% url 'contact' %}">Biz bilan aloqa</a></li>
                         <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="about.html">Universitet haqida</a>
                     <ul class="sub-menu">
-                        <li><a href="index.html" class="current-menu-item">MEI bilan tanishuv</a></li>
-                        <li><a href="index-2.html">Bog'lanish</a></li>
-                        <li><a href="index-3.html">Rasmiy ma'lumot</a></li>
-                        <li><a href="index-3.html">WEB resurslar</a></li>
-                        <li><a href="index-3.html">Hamkorlar</a></li>
-                        <li><a href="index-3.html">Shaxslar</a></li>
+                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}" class="current-menu-item">MEI bilan tanishuv</a></li>
+                        <li><a href="{% url 'about_university' slug='official-information' %}">Rasmiy ma'lumot</a></li>
+                        <li><a href="{% url 'about_university' slug='WEB-resource' %}">WEB resurslar</a></li>
+                        <li><a href="{% url 'about_university' slug='partners' %}">Hamkorlar</a></li>
+                        <li><a href="{% url 'about_university' slug='honorable-p' %}">Shaxslar</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="index.html#">Ta'lim</a>
+                    <a href="#">Ta'lim</a>
                     <ul class="sub-menu">
-                        <li><a href="courses.html">Jadval</a></li>
+                        <li><a href="{% url 'schedule' %}">Jadval</a></li>
                         <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
                         <li><a href="course-detail.html">Trening darajalari</a></li>
                         <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
@@ -513,7 +510,7 @@
                 <div class="col-12 col-md-6 col-lg-2">
                     <h5>Links</h5>
                     <ul>
-                        <li><a href="index.html#">MEI bilan tanishuv</a></li>
+                        <li><a href="{% url 'about_university' slug='introduce-MEI' %}">MEI bilan tanishuv</a></li>
                         <li><a href="{% url 'ads' %}">E'lonlar</a></li>
                         <li><a href="{% url 'news' %}">Yangiliklar</a></li>
                         <li><a href="index.html#">Ilmiy tadbirlar</a></li>
@@ -523,8 +520,8 @@
                     <h5>Information</h5>
                     <ul>
                         <li><a href="index.html#">FAQ's</a></li>
-                        <li><a href="index.html#">Biz bilan aloqa</a></li>
-                        <li><a href="index.html#">Rasmiy ma'lumot</a></li>
+                        <li><a href="{% url 'contact' %}">Biz bilan aloqa</a></li>
+                        <li><a href="{% url 'about_university' slug='official-information' %}">Rasmiy ma'lumot</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 newsletter">
@@ -581,6 +578,7 @@
     <script src="{% static 'assets/js/main.js' %}"></script>
     <script src="{% static 'assets/js/slider.js' %}"></script>
     <script src="{% static 'assets/js/toggler.js' %}"></script>
+    <script src="{% static 'assets/js/vPlayer.js' %}"></script>
     
 </body>
 

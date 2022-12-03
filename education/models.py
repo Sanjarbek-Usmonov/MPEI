@@ -23,7 +23,7 @@ class Group(models.Model):
 
 class Schedule(models.Model):
     schedule = models.FileField(upload_to='files', verbose_name=_("Upload file"))
-    group_id = models.ForeignKey(Group, on_delete=models.CASCADE, verbose_name=_("Groups"))
+    group_id = models.ForeignKey(Group, on_delete=models.CASCADE, verbose_name=_("Groups"), related_name='schedule')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 

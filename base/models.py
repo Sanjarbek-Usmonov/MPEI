@@ -11,8 +11,11 @@ class SiteLogo(models.Model):
 
 class IntroSection(models.Model):
     title = models.CharField(max_length=255, null=True, verbose_name=_('Title'))
-    some_text = models.TextField(null=True, verbose_name=_('Some text'))
+    title2 = models.CharField(max_length=255, null=True, verbose_name=_('Title'))
+    title3 = models.CharField(max_length=255, null=True, verbose_name=_('Title'))
+    title4 = models.CharField(max_length=255, null=True, verbose_name=_('Title'))
     image = models.ImageField(upload_to='images', null=True, verbose_name=_('Image'))
+    video = models.FileField(upload_to='images', null=True, verbose_name=_('Video'))
 
     class Meta:
         verbose_name = _('Introduction section')
@@ -59,6 +62,7 @@ class JoinOurNewsletterForm(models.Model):
 
 class ReceivedMessages(models.Model):
     email = models.EmailField(max_length=255, null=True, verbose_name=_('email'))
+    phone_number = models.CharField(max_length=20, null=True, blank=True, verbose_name=_('phone_number'))
     message = models.TextField(null=True, blank=True, verbose_name=_('Message'))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created_at'))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_('updated_at'))

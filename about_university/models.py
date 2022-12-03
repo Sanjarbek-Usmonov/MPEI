@@ -19,17 +19,6 @@ class IntroduceMEI(models.Model):
         verbose_name = _("Introducing with MPEI")
         verbose_name_plural = _("Introducing with MPEI")
 
-class Contact(models.Model):
-    fullname = models.CharField(max_length=150, null=True, verbose_name=_("Full name"))
-    subject = models.CharField(max_length=150, null=True, verbose_name=_("Subject"))
-    email = models.CharField(max_length=200, null=True, verbose_name=_("Email"))
-    text = models.TextField(null=True, verbose_name=_("Text"))
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
-    updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
-
-    class Meta:
-        verbose_name = _("Contact")
-        verbose_name_plural = _("Contact")
 
 class LegalInfo(models.Model):
     text = RichTextUploadingField(null=True, verbose_name=_("Text"))

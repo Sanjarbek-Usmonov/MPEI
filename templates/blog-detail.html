@@ -1,0 +1,216 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Blog Breadcrub -->
+  <div class="breadcrub-style-2 section">
+    <div class="container-fluid">
+      <div class="heading">
+        <h1 class="page-heading">News</h1>
+        <div class="breadcrub-style">
+          <a href="/">Home</a>
+          <span class="arrow"> > </span>
+          <a href="{% url 'news' %}" class="active">News</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog detail -->
+  <section class="blog-detail section">
+    <div class="heading text-center">
+      <h2>{{new.title}}</h2>
+      <h6 class="date">{{new.created_at|date:'d M, Y'}}</h6>
+    </div>
+    <div class="media-grid">
+      <div class="row">
+        <div class="col-12 img"><img src="{{new.image.url}}"
+            alt="blog cover" class="img-fluid"></div>
+        {% if new.image_extra1 %}
+        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra1.url}}"
+            alt="blog img" class="img-fluid"></div>
+        {% endif %}
+        {% if new.image_extra2 %}
+        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra2.url}}"
+            alt="blog img" class="img-fluid"></div>
+        {% endif %}
+        {% if new.image_extra3 %}
+        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra3.url}}"
+            alt="blog img" class="img-fluid"></div>
+        {% endif %}
+        {% if new.image_extra4 %}
+        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra4.url}}"
+            alt="blog img" class="img-fluid"></div>
+        {% endif %}
+      </div>
+      <div class="side-social-icons hide-md-and-down">
+            {% if sociallinks.facebook %}
+            <a target="_blank" href="{{sociallinks.facebook}}"><i
+                        class="fab fa-facebook-square"></i></a>
+            {% endif %}
+            {% if sociallinks.instagram %}
+            <a target="_blank" href="{{sociallinks.instagram}}"><i
+                        class="fab fa-instagram"></i></a>
+            {% endif %}
+            {% if sociallinks.twitter %}
+            <a target="_blank" href="{{sociallinks.twitter}}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if sociallinks.linkedin %}
+            <a target="_blank" href="{{sociallinks.linkedin}}"><i
+                        class="fab fa-linkedin"></i></a>
+            {% endif %}
+            {% if sociallinks.youtube %}
+            <a target="_blank" href="{{sociallinks.youtube}}"><i
+                        class="fab fa-youtube"></i></a>
+            {% endif %}
+            {% if sociallinks.telegram %}
+            <a target="_blank" href="{{sociallinks.telegram}}"><i
+                        class="fab fa-telegram"></i></a>
+            {% endif %}
+            {% if sociallinks.whatsapp %}
+            <a target="_blank" href="{{sociallinks.whatsapp}}"><i
+                        class="fab fa-whatsapp"></i></a>
+            {% endif %}
+      </div>
+    </div>
+    <div class="blog-contents">
+      <!-- Side form icons -->
+      <div class="fixed-right side-form-icons">
+        <i class="fas fa-phone icon" id="open-opening-popup"></i>
+        <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
+        <i class="fas fa-envelope icon" id="open-form-popup"></i>
+      </div>
+      <div class="container">
+        <div class="blog-text">
+          <p>{{new.text}}</p>
+        </div>
+
+        <div class="reacts">
+          <div class="react">
+            <i class="fas fa-eye"></i>
+            <p>{{new.count}} views</p>
+          </div>
+        </div>
+
+        <div class="more">
+          <a href="blog-detail.html#">Continue reading <span class="arrow">🡢</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Popup -->
+    <div class="side-form-popup">
+        <div class="popup-wrapper">
+            <div class="center-popup">
+                <div class="opening-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-8 media">
+                            <img src="{% static 'assets/img/University/students/adolescent-adorable-alone.png' %}" alt="media"
+                                class="img-fluid">
+                        </div>
+                        <div class="col-md-6 col-lg-4 content">
+                            <h5>Opening hours</h5>
+                            <div class="openings">
+                                <div class="opening opening-days">
+                                    <p class="day">Monday</p>
+                                    <div class="divider"></div>
+                                    <p class="day">Friday</p>
+                                </div>
+                                <div class="opening opening-time">
+                                    <p class="time">09.00 am</p>
+                                    <div class="divider"></div>
+                                    <p class="time">17.00 pm</p>
+                                </div>
+                            </div>
+                            <p class="num">{{contactaddress.phone_number}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-8 media">
+                            <div id="location-map"></iframe></div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 content">
+                            <h5>Address</h5>
+                            <p class="address">{{contactaddress.address}}</p>
+                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">Open in Maps</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-7 content">
+                            <h4>You have a question for us?</h4>
+                            <p>leave your message below or email us at {{contactaddress.email}}</p>
+                            <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
+                                {% csrf_token %}
+                                <div class="form-group required">
+                                    <label for="email">Email address</label>
+                                    <input type="email" id="email" class="form-control" name="email"
+                                        placeholder="johnLP12@gmail.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <input type="text" id="message" class="form-control" name="message"
+                                        placeholder="Hello, I wanted to know about this particular course called..." />
+                                    <span class="small-text">120 characters left</span>
+                                </div>
+                                <button class="main-btn" type="submit">Send message</button>
+                            </form>
+                        </div>
+                        <div class="d-none d-lg-block col-lg-5 media">
+                            <img src="{% static 'assets/img/University/Coming_soon/ambar-simpang.png' %}" alt="media image"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+  <!-- More blogs -->
+  <section class="more-carousel-1 text-center">
+    <div class="container">
+      <h2 class="margin-bottom-60">You might also like...</h2>
+      <div class="blog-carousel-wrap">
+        <div class="blog-carousel-controls">
+          <ul class="carousel-icon">
+            <li class="prev">
+              <i class="flaticon-back"></i>
+              <span class="text">Previous post</span>
+            </li>
+            <li class="next">
+              <span class="text">Next post</span>
+              <i class="flaticon-next"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="blog-carousel-2 padding-bottom-60">
+            {% for n in news %}
+            <div class="single-blog-grid-item-01">
+                <div class="thumb">
+                    <img src="{{n.image.url}}" alt="blog image">
+                </div>
+                <div class="content">
+                    <p class="card-text">{{n.created_at|date:'d M, Y'}}</p>
+                    <a href="blog-detail.html#" class="title">{{n.title}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

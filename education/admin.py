@@ -17,46 +17,46 @@ class MyTranslationAdmin(TranslationAdmin):
 admin.site.register(Schedule)
 
 @admin.register(Faculty)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class FacultyAdmin(MyTranslationAdmin):
     list_display = ['id', 'name']
     search_fields = ['name', 'id']
 
 @admin.register(Group)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class GroupAdmin(MyTranslationAdmin):
     list_display = ['id', 'name']
     search_fields = ['name', 'id']
 
 @admin.register(EduProgram)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class EduProgramAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(TreResults)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class TreResultsAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(AdditionalEdu)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class AdditionalEduAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(DistanceEdu)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class DistanceEduAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(EmpAndInternship)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class EmpAndInternshipAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(FinalQua)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class FinalQuaAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']
 
 @admin.register(OfficialDocs)
-class IntroduceMEIAdmin(MyTranslationAdmin):
+class OfficialDocsAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['text', 'id']

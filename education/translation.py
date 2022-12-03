@@ -2,38 +2,38 @@ from modeltranslation import translator
 from . import models
 
 @translator.register(models.Faculty)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class FacultyTranslation(translator.TranslationOptions):
     fields = ('name',)
 
 @translator.register(models.Group)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class GroupTranslation(translator.TranslationOptions):
     fields = ('name',)
 
 @translator.register(models.EduProgram)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class EduProgramTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.TreResults)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class TreResultsTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.AdditionalEdu)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class AdditionalEduTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.DistanceEdu)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class DistanceEduTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.EmpAndInternship)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class EmpAndInternshipTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.FinalQua)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class FinalQuaTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.OfficialDocs)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class OfficialDocsTranslation(translator.TranslationOptions):
     fields = ('text',)
 

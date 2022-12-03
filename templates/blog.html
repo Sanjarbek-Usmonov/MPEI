@@ -17,8 +17,11 @@
           <li><a href="{% url 'news' %}" class="active">All</a></li>
           <li><a href="{% url 'ads' %}">Ennouncements</a></li>
           <li class="d-flex align-items-center search-input-group">
-            <input type="text" placeholder="Type something to search" />
-            <i class="flaticon-search"></i>            
+            <form method="post">
+              {% csrf_token %}
+            <input name="search-ad" type="text" placeholder="Type something to search" />
+            <button type="submit" style="border:none; background:none;"><i class="flaticon-search"></i></button>
+            </form>            
           </li>
         </ul>
       </div>
@@ -51,7 +54,7 @@
                               </div>
                         </div>
                         <p>{{new.text|truncatechars:200}}</p>
-                        <a class="small-btn" href="#">Read it</a>
+                        <a class="small-btn" href="{% url 'news-detail' pk=new.pk %}">Read it</a>
                     </div>
                 </div>
             </div>
@@ -75,14 +78,14 @@
             </a>
             {% endif %}
             <div class="page-num">
-              {% for i in news.paginator.page_range %}
-              {% if news.number == i %}
-              <a class="current">{{ news.current_page_number }}</a>
-              {% endif %}
-              {% endfor %}
               {% if news.has_previous %}
               <a class="total">{{ news.previous_page_number }}</a>
               {% endif %}
+              {% for i in news.paginator.page_range %}
+              {% if news.number == i %}
+              <a class="current">{{ i }}</a>
+              {% endif %}
+              {% endfor %}
               {% if news.has_next %}
               <a class="total">{{ news.next_page_number }}</a>
               {% endif %}

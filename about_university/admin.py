@@ -5,11 +5,6 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 
-admin.site.register(LegalInfo)
-admin.site.register(WEBresource)
-admin.site.register(Partners)
-admin.site.register(Honorary)
-
 admin.site.unregister(Group)
 admin.site.unregister(User)
 admin.site.register(CustomUser, UserAdmin)
@@ -30,8 +25,22 @@ class IntroduceMEIAdmin(MyTranslationAdmin):
     list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
-@admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ['id', 'fullname', 'subject', 'created_at']
-    search_fields = ['fullname', 'id', 'subject']
+@admin.register(LegalInfo)
+class LegalInfoAdmin(MyTranslationAdmin):
+    list_display = ['id', 'text']
+    search_fields = ['text', 'id']
 
+@admin.register(WEBresource)
+class WEBresourceAdmin(MyTranslationAdmin):
+    list_display = ['id', 'text']
+    search_fields = ['text', 'id']
+
+@admin.register(Partners)
+class PartnersAdmin(MyTranslationAdmin):
+    list_display = ['id', 'text']
+    search_fields = ['text', 'id']
+
+@admin.register(Honorary)
+class HonoraryAdmin(MyTranslationAdmin):
+    list_display = ['id', 'fullname']
+    search_fields = ['fullname', 'id']
