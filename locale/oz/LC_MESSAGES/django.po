@@ -383,7 +383,7 @@ msgstr "МДҲнинг асосий ташкилоти"
 
 #: .\foreign\models.py:49 .\foreign\models.py:50
 msgid "Cooperation"
-msgstr "Таълим"
+msgstr "Хамкорлик"
 
 #: .\foreign\models.py:58 .\foreign\models.py:59
 msgid "Graduates"
@@ -445,7 +445,7 @@ msgstr "Академик даражаси"
 
 #: .\structure\models.py:14 .\structure\models.py:15
 msgid "Scientific Council"
-msgstr "Илмий тадбирлар"
+msgstr "Илмий кенгаш"
 
 #: .\structure\models.py:23 .\structure\models.py:24
 msgid "University management"

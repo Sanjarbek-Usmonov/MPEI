@@ -17,7 +17,7 @@ class MyTranslationAdmin(TranslationAdmin):
 
 @admin.register(PreparingForeigners)
 class PreparingForeignersAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(ForeignPrograms)
@@ -27,40 +27,40 @@ class ForeignProgramsAdmin(MyTranslationAdmin):
 
 @admin.register(ForeignProgramDetail)
 class ForeignProgramDetailAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(OrganizationCIS)
 class OrganizationCISAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(Cooperation)
 class CooperationAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(Graduates)
 class GraduatesAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(AboutMPEIStudentsForeignPrograms)
 class AboutMPEIStudentsForeignProgramsAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(Information)
 class InformationAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(GlobalEnergyAssociation)
 class GlobalEnergyAssociationAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(RegistrationForAMO)
 class RegistrationForAMOAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']

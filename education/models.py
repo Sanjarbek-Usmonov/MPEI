@@ -7,6 +7,9 @@ class Faculty(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
+    def __str__(self) -> str:
+        return self.name
+
     class Meta:
         verbose_name = _("Faculties")
         verbose_name_plural = _("Faculties")
@@ -17,6 +20,9 @@ class Group(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
+    def __str__(self) -> str:
+        return self.name
+
     class Meta:
         verbose_name = _("Groups")
         verbose_name_plural = _("Groups")
@@ -26,6 +32,9 @@ class Schedule(models.Model):
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE, verbose_name=_("Groups"), related_name='schedule')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
+
+    def __str__(self) -> str:
+        return self.group_id
 
     class Meta:
         verbose_name = _("Schedule")

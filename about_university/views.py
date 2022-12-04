@@ -29,5 +29,5 @@ def about_university_view(request, slug=None):
     if slug == 'honorable-p':
         return render(request, 'card.html', context=context)
     else:
-        return render(request, 'about-university.html', context=context)
+        return render(request, 'universal.html', context=context)
 

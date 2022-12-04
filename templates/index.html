@@ -81,56 +81,56 @@
                                 <a href="index.html#">Ta'lim</a>
                                 <ul class="sub-menu">
                                     <li><a href="{% url 'schedule' %}">Jadval</a></li>
-                                    <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
-                                    <li><a href="course-detail.html">Trening darajalari</a></li>
-                                    <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
-                                    <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
-                                    <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
-                                    <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
-                                    <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                                    <li><a href="{% url 'edu-program' slug='edu-program' %}">Asosiy ta'lim dasturlari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='training-degree' %}">Trening darajalari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='additional-edu' %}">Qo'shimcha ta'lim</a></li>
+                                    <li><a href="{% url 'edu-program' slug='dist-edu' %}">Masofaviy ta'lim</a></li>
+                                    <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">Ishga joylashish va amaliyot</a></li>
+                                    <li><a href="{% url 'edu-program' slug='final-qua' %}">Yakuniy saralash ishlari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='official-docs' %}">Rasmiy hujjatlar</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="index.html#">Ilm-fan va innovatsiya</a>
+                                <a href="#">Ilm-fan va innovatsiya</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
-                                    <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
-                                    <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
-                                    <li><a href="blog-detail.html">Jurnallar</a></li>
-                                    <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                                    <li><a href="{% url 'science' slug='research' %}">Tadqiqot va ishlanmalar</a></li>
+                                    <li><a href="{% url 'science' slug='infrastructure' %}">Ilmiy infratuzilma</a></li>
+                                    <li><a href="{% url 'science' slug='scientific-cert' %}">Davlat ilmiy sertifikati</a></li>
+                                    <li><a href="{% url 'science' slug='journals' %}">Jurnallar</a></li>
+                                    <li><a href="{% url 'science' slug='scientific-events' %}">Ilmiy tadbirlar</a></li>
                                 </ul>
                             </li>
-                                <li class="menu-item-has-children"><a href="404.html">Xalqaro faoliyat</a>
+                                <li class="menu-item-has-children"><a href="#">Xalqaro faoliyat</a>
                                     <ul class="sub-menu">
-                                        <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
-                                        <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                                        <li><a href="{% url 'international' slug='preparing-foreigners' %}">Xorijiy fuqarolarni tayyorlash</a></li>
+                                        <li><a href="{% url 'international' slug='foreign-programs' %}">Xalqaro dasturlar</a></li>
+                                        <li><a href="{% url 'international' slug='organization-CIS' %}">MDH ning asosiy tashkiloti</a></li>
+                                        <li><a href="{% url 'international' slug='cooperation' %}">Hamkorlik</a></li>
+                                        <li><a href="{% url 'international' slug='graduates' %}">Bitiruvchilar</a></li>
+                                        <li><a href="{% url 'international' slug='students-foreign-program' %}">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                                        <li><a href="{% url 'international' slug='information' %}">Ma'lumotnoma</a></li>
+                                        <li><a href="{% url 'international' slug='global-energy-association' %}">"Global energiya" assotsatsiyasi</a></li>
+                                        <li><a href="{% url 'international' slug='registration-for-amo' %}">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="faq.html">Universitet hayoti</a>
+                                <li class="menu-item-has-children"><a href="#">Universitet hayoti</a>
                                     <ul class="sub-menu">
-                                        <li><a href="Pagination-UI.html">Madaniyat</a></li>
-                                        <li><a href="breadcrub.html">Salomatlik va sport</a></li>
-                                        <li><a href="Footer-UI.html">Kampus</a></li>
-                                        <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                                        <li><a href="{% url 'univer-life' slug='culture' %}">Madaniyat</a></li>
+                                        <li><a href="{% url 'univer-life' slug='health-and-sport' %}">Salomatlik va sport</a></li>
+                                        <li><a href="{% url 'univer-life' slug='campus' %}">Kampus</a></li>
+                                        <li><a href="{% url 'univer-life' slug='psycological-support' %}">MPEI da psixologik yordam</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="index.html#">Tuzilish</a>
+                                <li class="menu-item-has-children"><a href="#">Tuzilish</a>
                                     <ul class="sub-menu">
-                                        <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
-                                        <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                                        <li><a href="{% url 'scient-concil' slug='scientific-council' %}">Ilmiy kengash</a></li>
+                                        <li><a href="{% url 'scient-concil' slug='university-management' %}">Universitet boshqaruvi</a></li>
                                         <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
-                                        <li><a href="Icons.html">Direktorlar kengashi</a></li>
-                                        <li><a href="Tables-UI.html">Institutlar</a></li>
-                                        <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
-                                        <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
-                                        <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                                        <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">Direktorlar kengashi</a></li>
+                                        {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                                        <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">MPEI kafedralari va markazlari</a></li>
+                                        <li><a href="{% url 'scient-concil' slug='offices' %}">Ofislar va bo'limlar</a>
+                                        <li><a href="{% url 'scient-concil' slug='public-organizations' %}">Jamoat tashkilotlari</a></li>
                                     </ul>
                                 </li>
                             </li>            
@@ -164,23 +164,23 @@
                                 <a href="#">Ta'lim</a>
                                 <ul class="sub-menu">
                                     <li><a href="{% url 'schedule' %}">Jadval</a></li>
-                                    <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
-                                    <li><a href="course-detail.html">Trening darajalari</a></li>
-                                    <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
-                                    <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
-                                    <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
-                                    <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
-                                    <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                                    <li><a href="{% url 'edu-program' slug='edu-program' %}">Asosiy ta'lim dasturlari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='training-degree' %}">Trening darajalari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='additional-edu' %}">Qo'shimcha ta'lim</a></li>
+                                    <li><a href="{% url 'edu-program' slug='dist-edu' %}">Masofaviy ta'lim</a></li>
+                                    <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">Ishga joylashish va amaliyot</a></li>
+                                    <li><a href="{% url 'edu-program' slug='final-qua' %}">Yakuniy saralash ishlari</a></li>
+                                    <li><a href="{% url 'edu-program' slug='official-docs' %}">Rasmiy hujjatlar</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Ilm-fan va innovatsiya</a>
                                 <ul class="sub-menu">
-                                    <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
-                                    <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
-                                    <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
-                                    <li><a href="blog-detail.html">Jurnallar</a></li>
-                                    <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                                    <li><a href="{% url 'science' slug='research' %}">Tadqiqot va ishlanmalar</a></li>
+                                    <li><a href="{% url 'science' slug='infrastructure' %}">Ilmiy infratuzilma</a></li>
+                                    <li><a href="{% url 'science' slug='scientific-cert' %}">Davlat ilmiy sertifikati</a></li>
+                                    <li><a href="{% url 'science' slug='journals' %}">Jurnallar</a></li>
+                                    <li><a href="{% url 'science' slug='scientific-events' %}">Ilmiy tadbirlar</a></li>
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
@@ -188,35 +188,35 @@
                                 <ul class="sub-menu">
                                     <li class="sub-menu-item-has-children"><a href="#">Xalqaro faoliyat</a>
                                         <ul class="sub-menu">
-                                            <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
-                                            <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                                            <li><a href="{% url 'international' slug='preparing-foreigners' %}">Xorijiy fuqarolarni tayyorlash</a></li>
+                                            <li><a href="{% url 'international' slug='foreign-programs' %}">Xalqaro dasturlar</a></li>
+                                            <li><a href="{% url 'international' slug='organization-CIS' %}">MDH ning asosiy tashkiloti</a></li>
+                                            <li><a href="{% url 'international' slug='cooperation' %}">Hamkorlik</a></li>
+                                            <li><a href="{% url 'international' slug='graduates' %}">Bitiruvchilar</a></li>
+                                            <li><a href="{% url 'international' slug='students-foreign-program' %}">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                                            <li><a href="{% url 'international' slug='information' %}">Ma'lumotnoma</a></li>
+                                            <li><a href="{% url 'international' slug='global-energy-association' %}">"Global energiya" assotsatsiyasi</a></li>
+                                            <li><a href="{% url 'international' slug='registration-for-amo' %}">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
                                         </ul>
                                     </li>
                                     <li class="sub-menu-item-has-children"><a href="#">Universitet hayoti</a>
                                         <ul class="sub-menu">
-                                            <li><a href="Pagination-UI.html">Madaniyat</a></li>
-                                            <li><a href="breadcrub.html">Salomatlik va sport</a></li>
-                                            <li><a href="Footer-UI.html">Kampus</a></li>
-                                            <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                                            <li><a href="{% url 'univer-life' slug='culture' %}">Madaniyat</a></li>
+                                            <li><a href="{% url 'univer-life' slug='health-and-sport' %}">Salomatlik va sport</a></li>
+                                            <li><a href="{% url 'univer-life' slug='campus' %}">Kampus</a></li>
+                                            <li><a href="{% url 'univer-life' slug='psycological-support' %}">MPEI da psixologik yordam</a></li>
                                         </ul>
                                     </li>
                                     <li class="sub-menu-item-has-children"><a href="#">Tuzilish</a>
                                         <ul class="sub-menu">
-                                            <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
-                                            <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='scientific-council' %}">Ilmiy kengash</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='university-management' %}">Universitet boshqaruvi</a></li>
                                             <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
-                                            <li><a href="Icons.html">Direktorlar kengashi</a></li>
-                                            <li><a href="Tables-UI.html">Institutlar</a></li>
-                                            <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
-                                            <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
-                                            <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">Direktorlar kengashi</a></li>
+                                            {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                                            <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">MPEI kafedralari va markazlari</a></li>
+                                            <li><a href="{% url 'scient-concil' slug='offices' %}">Ofislar va bo'limlar</a>
+                                            <li><a href="{% url 'scient-concil' slug='public-organizations' %}">Jamoat tashkilotlari</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -378,56 +378,56 @@
                 <a href="index.html#">Ta'lim</a>
                 <ul class="sub-menu">
                     <li><a href="{% url 'schedule' %}">Jadval</a></li>
-                    <li><a href="all-courses.html">Asosiy ta'lim dasturlari</a></li>
-                    <li><a href="course-detail.html">Trening darajalari</a></li>
-                    <li><a href="membership-page.html">Qo'shimcha ta'lim</a></li>
-                    <li><a href="enrollment.html">Masofaviy ta'lim</a></li>
-                    <li><a href="join.html">Ishga joylashish va amaliyot</a></li>
-                    <li><a href="teacher.html">Yakuniy saralash ishlari</a></li>
-                    <li><a href="teacher.html">Rasmiy hujjatlar</a></li>
+                    <li><a href="{% url 'edu-program' slug='edu-program' %}">Asosiy ta'lim dasturlari</a></li>
+                    <li><a href="{% url 'edu-program' slug='training-degree' %}">Trening darajalari</a></li>
+                    <li><a href="{% url 'edu-program' slug='additional-edu' %}">Qo'shimcha ta'lim</a></li>
+                    <li><a href="{% url 'edu-program' slug='dist-edu' %}">Masofaviy ta'lim</a></li>
+                    <li><a href="{% url 'edu-program' slug='emp-and-internship' %}">Ishga joylashish va amaliyot</a></li>
+                    <li><a href="{% url 'edu-program' slug='final-qua' %}">Yakuniy saralash ishlari</a></li>
+                    <li><a href="{% url 'edu-program' slug='official-docs' %}">Rasmiy hujjatlar</a></li>
                 </ul>
             </li>
             <li class="menu-item-has-children">
-                <a href="index.html#">Ilm-fan va innovatsiya</a>
+                <a href="#">Ilm-fan va innovatsiya</a>
                 <ul class="sub-menu">
-                    <li><a href="blog.html">Tadqiqot va ishlanmalar</a></li>
-                    <li><a href="blog-detail.html">Ilmiy infratuzilma</a></li>
-                    <li><a href="blog-detail.html">Davlat ilmiy sertifikati</a></li>
-                    <li><a href="blog-detail.html">Jurnallar</a></li>
-                    <li><a href="blog-detail.html">Ilmiy tadbirlar</a></li>
+                    <li><a href="{% url 'science' slug='research' %}">Tadqiqot va ishlanmalar</a></li>
+                    <li><a href="{% url 'science' slug='infrastructure' %}">Ilmiy infratuzilma</a></li>
+                    <li><a href="{% url 'science' slug='scientific-cert' %}">Davlat ilmiy sertifikati</a></li>
+                    <li><a href="{% url 'science' slug='journals' %}">Jurnallar</a></li>
+                    <li><a href="{% url 'science' slug='scientific-events' %}">Ilmiy tadbirlar</a></li>
                 </ul>
             </li>
-                <li class="menu-item-has-children"><a href="404.html">Xalqaro faoliyat</a>
+                <li class="menu-item-has-children"><a href="#">Xalqaro faoliyat</a>
                     <ul class="sub-menu">
-                        <li><a href="Card-UI.html">Xorijiy fuqarolarni tayyorlash</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">Xalqaro dasturlar</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">MDH ning asosiy tashkiloti</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">Hamkorlik</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">Bitiruvchilar</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">MPEI talabalari xalqaro dasturlar haqida</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">Ma'lumotnoma</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">"Global energiya" assotsatsiyasi</a></li>
-                        <li><a href="Popover&amp;Lists-UI.html">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
+                        <li><a href="{% url 'international' slug='preparing-foreigners' %}">Xorijiy fuqarolarni tayyorlash</a></li>
+                        <li><a href="{% url 'international' slug='foreign-programs' %}">Xalqaro dasturlar</a></li>
+                        <li><a href="{% url 'international' slug='organization-CIS' %}">MDH ning asosiy tashkiloti</a></li>
+                        <li><a href="{% url 'international' slug='cooperation' %}">Hamkorlik</a></li>
+                        <li><a href="{% url 'international' slug='graduates' %}">Bitiruvchilar</a></li>
+                        <li><a href="{% url 'international' slug='students-foreign-program' %}">MPEI talabalari xalqaro dasturlar haqida</a></li>
+                        <li><a href="{% url 'international' slug='information' %}">Ma'lumotnoma</a></li>
+                        <li><a href="{% url 'international' slug='global-energy-association' %}">"Global energiya" assotsatsiyasi</a></li>
+                        <li><a href="{% url 'international' slug='registration-for-amo' %}">AMO ning yubiley XXV konferensiyasi ishtirokchilari uchun ro'yxatdan o'tish shakli</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="faq.html">Universitet hayoti</a>
+                <li class="menu-item-has-children"><a href="#">Universitet hayoti</a>
                     <ul class="sub-menu">
-                        <li><a href="Pagination-UI.html">Madaniyat</a></li>
-                        <li><a href="breadcrub.html">Salomatlik va sport</a></li>
-                        <li><a href="Footer-UI.html">Kampus</a></li>
-                        <li><a href="Countdowns&amp;Menus-UI.html">MPEI da psixologik yordam</a></li>
+                        <li><a href="{% url 'univer-life' slug='culture' %}">Madaniyat</a></li>
+                        <li><a href="{% url 'univer-life' slug='health-and-sport' %}">Salomatlik va sport</a></li>
+                        <li><a href="{% url 'univer-life' slug='campus' %}">Kampus</a></li>
+                        <li><a href="{% url 'univer-life' slug='psycological-support' %}">MPEI da psixologik yordam</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="index.html#">Tuzilish</a>
+                <li class="menu-item-has-children"><a href="#">Tuzilish</a>
                     <ul class="sub-menu">
-                        <li><a href="Typography-UI.html">Ilmiy kengash</a></li>
-                        <li><a href="accordions.html">Universitet boshqaruvi</a></li>
+                        <li><a href="{% url 'scient-concil' slug='scientific-council' %}">Ilmiy kengash</a></li>
+                        <li><a href="{% url 'scient-concil' slug='university-management' %}">Universitet boshqaruvi</a></li>
                         <li><a href="Button-UI.html">"MPEI" NRU ning Toshkent shahridagi filiali rahbariyati</a></li>
-                        <li><a href="Icons.html">Direktorlar kengashi</a></li>
-                        <li><a href="Tables-UI.html">Institutlar</a></li>
-                        <li><a href="Forms-UI.html">MPEI kafedralari va markazlari</a></li>
-                        <li><a href="Alerts&amp;Cookies-UI.html">Ofislar va bo'limlar</a>
-                        <li><a href="Model-UI.html">Jamoat tashkilotlari</a></li>
+                        <li><a href="{% url 'scient-concil' slug='the-board-off-directors' %}">Direktorlar kengashi</a></li>
+                        {% comment %} <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">Institutlar</a></li> {% endcomment %}
+                        <li><a href="{% url 'scient-concil' slug='departments-and-centers' %}">MPEI kafedralari va markazlari</a></li>
+                        <li><a href="{% url 'scient-concil' slug='offices' %}">Ofislar va bo'limlar</a>
+                        <li><a href="{% url 'scient-concil' slug='public-organizations' %}">Jamoat tashkilotlari</a></li>
                     </ul>
                 </li>
             </li>            

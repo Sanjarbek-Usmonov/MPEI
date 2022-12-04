@@ -18,20 +18,20 @@ class MyTranslationAdmin(TranslationAdmin):
 
 @admin.register(Culture)
 class CultureAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(HealthAndSport)
 class HealthAndSportAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(Campus)
 class CampusAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(PsycoSupport)
 class PsycoSupportAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']

@@ -17,6 +17,9 @@ class ForeignPrograms(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
+    def __str__(self) -> str:
+        return self.name
+
     class Meta:
         verbose_name = _("Foreign Programs")
         verbose_name_plural = _("Foreign Programs")

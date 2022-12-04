@@ -45,9 +45,11 @@ class ScientEvents(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
+    def __str__(self) -> str:
+        return self.name
     class Meta:
-        verbose_name = _("Scientific event detail")
-        verbose_name_plural = _("Scientific event detail")
+        verbose_name = _("Scientific events")
+        verbose_name_plural = _("Scientific events")
 
 class ScientEventDetail(models.Model):
     text = RichTextUploadingField(null=True, verbose_name=_("Text"))
@@ -56,5 +58,5 @@ class ScientEventDetail(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
     class Meta:
-        verbose_name = _("Scientific events")
-        verbose_name_plural = _("Scientific events")
+        verbose_name = _("Scientific event detail")
+        verbose_name_plural = _("Scientific event detail")

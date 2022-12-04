@@ -31,6 +31,10 @@ urlpatterns += i18n_patterns(
     path('', include('base.urls')),
     path('edu/', include('education.urls')),
     path('news/', include('news.urls')),
+    path('science-and-innovations/', include('science_and_innovation.urls')),
+    path('in-f/', include('foreign.urls')),
+    path('university/', include('university_life.urls')),
+    path('structure/', include('structure.urls')),
 )
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

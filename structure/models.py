@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 class ScientificCouncil(models.Model):
     name = models.CharField(max_length=200, verbose_name=_("Name"))
     academic_degree = models.CharField(max_length=200, verbose_name=_("Academic degree"))
+    about = models.CharField(max_length=255, verbose_name=_("About"), null=True)
     image = models.ImageField(upload_to='images', verbose_name=_("image"))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))

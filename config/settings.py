@@ -289,5 +289,6 @@ CKEDITOR_UPLOAD_PATH = "ckuploads/"
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
+        'allowedContent': True
     },
 }

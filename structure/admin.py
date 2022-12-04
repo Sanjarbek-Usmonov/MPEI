@@ -22,8 +22,8 @@ class ScientificCouncilAdmin(MyTranslationAdmin):
     search_fields = ['name', 'id']
 
 @admin.register(UniversityManagement)
-class HealthAndSportAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+class UniversityManagementAdmin(MyTranslationAdmin):
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(MPEIuzLeaders)
@@ -33,7 +33,7 @@ class MPEIuzLeadersAdmin(MyTranslationAdmin):
 
 @admin.register(MPEIuzLeaderDetail)
 class MPEIuzLeaderDetailAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(TheBoardOfDirectors)
@@ -43,15 +43,15 @@ class TheBoardOfDirectorsAdmin(MyTranslationAdmin):
 
 @admin.register(DepartmentsAndCenters)
 class DepartmentsAndCentersAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(OfficesAndDepartments)
 class OfficesAndDepartmentsAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(PublicOrganizations)
 class PublicOrganizationsAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']

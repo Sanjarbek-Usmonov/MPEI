@@ -386,7 +386,7 @@ msgstr "Главная организация СНГ"
 
 #: .\foreign\models.py:49 .\foreign\models.py:50
 msgid "Cooperation"
-msgstr "Образование"
+msgstr "Сотрудничество"
 
 #: .\foreign\models.py:58 .\foreign\models.py:59
 msgid "Graduates"
@@ -447,7 +447,7 @@ msgstr "Ученая степень"
 
 #: .\structure\models.py:14 .\structure\models.py:15
 msgid "Scientific Council"
-msgstr "Научные мероприятия"
+msgstr "Ученый совет"
 
 #: .\structure\models.py:23 .\structure\models.py:24
 msgid "University management"

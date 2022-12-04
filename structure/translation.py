@@ -3,7 +3,7 @@ from . import models
 
 @translator.register(models.ScientificCouncil)
 class ScientificCouncilTranslation(translator.TranslationOptions):
-    fields = ('name', 'academic_degree')
+    fields = ('name', 'academic_degree', 'about')
 
 @translator.register(models.UniversityManagement)
 class UniversityManagementTranslation(translator.TranslationOptions):

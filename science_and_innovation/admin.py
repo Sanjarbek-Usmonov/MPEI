@@ -17,12 +17,12 @@ class MyTranslationAdmin(TranslationAdmin):
 
 @admin.register(ResearchAndDev)
 class IntroduceMEIAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(ScientInfrastructure)
 class IntroduceMEIAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(ScientificCert)
@@ -32,7 +32,7 @@ class IntroduceMEIAdmin(MyTranslationAdmin):
 
 @admin.register(Journals)
 class IntroduceMEIAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']
 
 @admin.register(ScientEvents)
@@ -42,5 +42,5 @@ class IntroduceMEIAdmin(MyTranslationAdmin):
 
 @admin.register(ScientEventDetail)
 class IntroduceMEIAdmin(MyTranslationAdmin):
-    list_display = ['id', 'text']
+    list_display = ['id', 'created_at']
     search_fields = ['text', 'id']

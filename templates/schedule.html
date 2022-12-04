@@ -20,7 +20,6 @@
       <!-- Stripped Table -->
       <div class="stripped-table-part">
         <h2>Choose your faculty</h2>
-
         <table class="table stripped-package-table margin-top-80 margin-bottom-80">
             <thead>
               <tr>
@@ -30,7 +29,7 @@
             <tbody>
               {% for q in query %}
               <tr>
-                <th scope="row"><a href="#">{{q.name}}</a></th>
+                <th scope="row"><a href="{% url 'group' pk=q.pk %}">{{q.name}}</a></th>
               </tr>
               {% endfor %}
             </tbody>
