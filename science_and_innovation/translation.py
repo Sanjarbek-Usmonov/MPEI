@@ -2,25 +2,25 @@ from modeltranslation import translator
 from . import models
 
 @translator.register(models.ResearchAndDev)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class ResearchAndDevTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.ScientInfrastructure)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class ScientInfrastructureTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.ScientificCert)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class ScientificCertTranslation(translator.TranslationOptions):
     fields = ('name',)
 
 @translator.register(models.Journals)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class JournalsTranslation(translator.TranslationOptions):
     fields = ('text',)
 
 @translator.register(models.ScientEvents)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class ScientEventsTranslation(translator.TranslationOptions):
     fields = ('name',)
 
 @translator.register(models.ScientEventDetail)
-class IntroduceMEITranslation(translator.TranslationOptions):
+class ScientEventDetailTranslation(translator.TranslationOptions):
     fields = ('text',)

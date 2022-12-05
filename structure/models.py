@@ -27,9 +27,15 @@ class UniversityManagement(models.Model):
 class MPEIuzLeaders(models.Model):
     name = models.CharField(max_length=200, verbose_name=_("Name"))
     academic_degree = models.CharField(max_length=200, verbose_name=_("Academic degree"))
+    some_text = models.CharField(max_length=255, verbose_name=_('Some text'), null=True)
+    phone_number = models.CharField(max_length=20, verbose_name=_('Phone number'), null=True)
+    email = models.CharField(max_length=150, verbose_name=_('Email'), null=True)
     image = models.ImageField(upload_to='images', verbose_name=_("image"))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
+
+    def __str__(self) -> str:
+        return self.name
 
     class Meta:
         verbose_name = _("Heads of MPEI Tashkent branch")
@@ -37,7 +43,7 @@ class MPEIuzLeaders(models.Model):
 
 class MPEIuzLeaderDetail(models.Model):
     text = RichTextUploadingField(null=True, verbose_name=_("Text"))
-    MPEIuzLeaders_id = models.ForeignKey(MPEIuzLeaders, on_delete=models.CASCADE, blank=True, verbose_name=_("Heads of MPEI Tashkent branch"))
+    mpeiuzLeaders_id = models.ForeignKey(MPEIuzLeaders, on_delete=models.CASCADE, verbose_name=_("Heads of MPEI Tashkent branch"))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("created_at"))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 

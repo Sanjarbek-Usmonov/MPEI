@@ -37,4 +37,40 @@ def scient_concil_view(request, slug=None):
         return render(request, 'universal.html', context=context)
 
 
+def leaders(request):
+    site_logo = SiteLogo.objects.all().first()
+    sociallinks = SocialLinks.objects.all().first()
+    contactaddress = ContactAddress.objects.all().first()
+    newslettertext = JoinOurNewsletterText.objects.all().first()
+    query = MPEIuzLeaders.objects.all()
+
+    context = {
+        'query': query,
+        'site_logo': site_logo,
+        'sociallinks': sociallinks,
+        'contactaddress': contactaddress,
+        'newslettertext': newslettertext,
+    }
+    return render(request, 'leadership.html', context=context)
+
+def leader_detail(request, pk):
+    site_logo = SiteLogo.objects.all().first()
+    sociallinks = SocialLinks.objects.all().first()
+    contactaddress = ContactAddress.objects.all().first()
+    newslettertext = JoinOurNewsletterText.objects.all().first()
+
+    try:
+        query = MPEIuzLeaderDetail.objects.get(mpeiuzLeaders_id=pk)
+    except Exception as e:
+        query = 'Not Found'
+
+    context = {
+        'query': query,
+        'site_logo': site_logo,
+        'sociallinks': sociallinks,
+        'contactaddress': contactaddress,
+        'newslettertext': newslettertext,
+    }
+    return render(request, 'universal.html', context=context)
+
 

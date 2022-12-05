@@ -1,14 +1,16 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-    <!-- Breadcrumb -->
-    <div class="breadcrub-style-5 section">
+  <!-- Header Four -->
+  <div class="section">
+    <div class="breadcrub-style-4">
       <div class="container">
         <div class="heading">
-          <h1>News</h1>
+          <h2>News</h2>
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Page Navigation -->
     <div class="page-nav-section section hide-md-and-down">
@@ -27,45 +29,37 @@
       </div>
     </div>
 
-    <!-- Blog Area -->
-    <div class="blogs-area-section section">
-      <div class="container-fluid">
-        {% for new in news %}
-        {% if forloop.first %}
-        <div class="row">
-          {% endif %}
-            <div class="col-6 col-lg-6 blog-content">
-            <!-- 2 column blog -->
-                <div class="row blog blog-sum-item-style-1">
-                    <div class="col-12 col-md-5 media">
-                      <img
-                        src="{{new.image.url}}"
-                        alt="blog img"
-                        class="img-fluid"
-                      />
+
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            {% for new in news %}
+            <div class="col-lg-6">
+              <div class="course-card-style-2">
+                <div class="card">
+                  <img class="card-img-top" src="{{new.image.url}}"
+                    alt="Card image cap">
+                  <div class="card-img-overlay">
+                    <div class="card-body">
+                      <h5>{{new.title}}</h5>
+                      <p class="auther">{{new.created_at|date:'d M, Y'}}</p>
+                      <p class="details">{{new.text|truncatechars:255}}</p>
+      
+                      <div class="more">
+                        <h4 class="price"><sup></sup><i class="fas fa-eye"></i> {{new.count}}</h4>
+                        <a href="{% url 'news-detail' pk=new.pk %}" class="small-btn">Read it</a>
+                      </div>
                     </div>
-                    <div class="col-12 col-md-5 content">
-                        <h4>{{new.title}}</h4>
-                        <h6 class="date">{{new.created_at|date:'d M, Y'}}</h6>
-                        <div class="reacts">
-                              <div class="react">
-                                  <i class="fas fa-eye"></i>
-                                  <p>{{new.count}} views</p>
-                              </div>
-                        </div>
-                        <p>{{new.text|truncatechars:200}}</p>
-                        <a class="small-btn" href="{% url 'news-detail' pk=new.pk %}">Read it</a>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        {% if forloop.counter|divisibleby:2 %}
+            {% endfor %}
+
+          </div>
         </div>
-        <div class="row">
-        {% endif %}
-        {% if forloop.last %}
-        </div>
-        {% endif %}
-        {% endfor %}
+      </div>
 
 
         <!-- Pagination -->

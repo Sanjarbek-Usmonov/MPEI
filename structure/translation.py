@@ -11,7 +11,7 @@ class UniversityManagementTranslation(translator.TranslationOptions):
 
 @translator.register(models.MPEIuzLeaders)
 class MPEIuzLeadersTranslation(translator.TranslationOptions):
-    fields = ('name', 'academic_degree')
+    fields = ('name', 'academic_degree', 'some_text')
 
 @translator.register(models.MPEIuzLeaderDetail)
 class MPEIuzLeaderDetailTranslation(translator.TranslationOptions):

@@ -1,19 +1,18 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-  <!-- Blog Breadcrub -->
-  <div class="breadcrub-style-2 section">
-    <div class="container-fluid">
-      <div class="heading">
-        <h1 class="page-heading">News</h1>
-        <div class="breadcrub-style">
-          <a href="/">Home</a>
-          <span class="arrow"> > </span>
-          <a href="{% url 'news' %}" class="active">News</a>
+  <!-- Header Four -->
+  <div class="section">
+    <div class="breadcrub-style-4">
+      <div class="container">
+        <div class="heading">
+          <h2>News</h2>
         </div>
       </div>
     </div>
   </div>
+
+  
 
   <!-- Blog detail -->
   <section class="blog-detail section">
@@ -22,26 +21,63 @@
       <h6 class="date">{{new.created_at|date:'d M, Y'}}</h6>
     </div>
     <div class="media-grid">
-      <div class="row">
-        <div class="col-12 img"><img src="{{new.image.url}}"
-            alt="blog cover" class="img-fluid"></div>
-        {% if new.image_extra1 %}
-        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra1.url}}"
-            alt="blog img" class="img-fluid"></div>
-        {% endif %}
-        {% if new.image_extra2 %}
-        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra2.url}}"
-            alt="blog img" class="img-fluid"></div>
-        {% endif %}
-        {% if new.image_extra3 %}
-        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra3.url}}"
-            alt="blog img" class="img-fluid"></div>
-        {% endif %}
-        {% if new.image_extra4 %}
-        <div class="col-6 col-lg-3 img"><img src="{{new.image_extra4.url}}"
-            alt="blog img" class="img-fluid"></div>
-        {% endif %}
-      </div>
+      <!-- Reviews Section -->
+      <section class="section testimonials-style-3">
+          <div class="container">
+            <div class="testimonial">
+                <div class="testimonial-slider-wrapper">
+                  <div class="testimonial-slider" style="background-image: url({{new.image.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% if new.image_extra1 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra1.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra2 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra2.url}})">
+                    <div class="content">
+                      </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra3 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra3.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if new.image_extra4 %}
+                  <div class="testimonial-slider" style="background-image: url({{new.image_extra4.url}})">
+                    <div class="content">
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+              <h1 class="lg-text">News</h1>
+              <div class="carousel-controlar">
+                <svg class="icon prev" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.7 61.19"
+                style="enable-background:new 0 0 7.7 61.19;" xml:space="preserve">
+                <polygon points="7,5.9 4,1.4 1,5.9 3.5,5.9 3.5,60.15 4.5,60.15 4.5,5.9 " />
+              </svg>
+              
+              <svg class="icon next" version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7.7 61.19"
+                  style="enable-background:new 0 0 7.7 61.19;" xml:space="preserve">
+                  <polygon points="1,55.65 4,60.15 7,55.65 4.5,55.65 4.5,1.4 3.5,1.4 3.5,55.65 " />
+                </svg>
+              </div>
+              <div class="pegination-wrapper d-none d-xl-block">
+                <div class="pagination-style-3">
+                  <h1 class="current">01</h1>
+                  <h5 class="total"></h5>
+                </div>
+              </div>
+            </div>
+          </section> 
       <div class="side-social-icons hide-md-and-down">
             {% if sociallinks.facebook %}
             <a target="_blank" href="{{sociallinks.facebook}}"><i

@@ -61,3 +61,7 @@ class WhyChooseUsAdmin(MyTranslationAdmin):
     list_display = ['id', 'text']
     search_fields = ['id', 'text']
     inlines = [WhyChooseUsReasonsAdmin]
+
+@admin.register(FAQs)
+class FAQsAdmin(MyTranslationAdmin):
+    list_display = ['id', 'question']

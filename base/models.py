@@ -97,3 +97,13 @@ class WhyChooseUsReasons(models.Model):
     class Meta:
         verbose_name = _('Why Choose us reasons')
         verbose_name_plural = _('Why Choose us reasons')
+
+class FAQs(models.Model):
+    question = models.CharField(max_length=255, null=True, verbose_name=_('Question'))
+    answer = models.TextField(null=True, verbose_name=_('Answer'))
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created_at'))
+    updated_at = models.DateTimeField(auto_now=True, verbose_name=_('updated_at'))
+
+    class Meta:
+        verbose_name = _('FAQs')
+        verbose_name_plural = _('FAQs')

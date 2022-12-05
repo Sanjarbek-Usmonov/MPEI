@@ -28,3 +28,7 @@ class WhyChooseUsTranslation(translator.TranslationOptions):
 @translator.register(models.WhyChooseUsReasons)
 class WhyChooseUsReasonsTranslation(translator.TranslationOptions):
     fields = ('text', 'title')
+
+@translator.register(models.FAQs)
+class FAQsTranslation(translator.TranslationOptions):
+    fields = ('question', 'answer')
