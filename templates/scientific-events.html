@@ -1,12 +1,13 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   <!-- Header -->
   <div class="breadcrub breadcrub-style-3 section">
     <div class="bg-img">
       <div class="container">
         <div class="heading">
-          <h1 class="page-heading">Scientific events</h1>
+          <h1 class="page-heading">{% trans "Scientific events"%}</h1>
         </div>
       </div>
     </div>
@@ -16,7 +17,7 @@
   <!-- Card Section -->
   <div class="section">
     <div class="container">
-      <h2 class="margin-bottom-50">Some scientific events.</h2>
+      <h2 class="margin-bottom-50">{% trans "Some scientific events"%}.</h2>
       {% for h in query %}
       {% if forloop.first %}
       <div class="row">

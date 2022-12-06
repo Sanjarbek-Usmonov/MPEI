@@ -1,18 +1,19 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 
 <!-- Breadcrumb -->
 <div class="breadcrub-style-6 section">
     <div class="bg-img"></div>
-    <h1 class="page-heading">Announcements</h1>
+    <h1 class="page-heading">{% trans "Announcements"%}</h1>
   </div>
 
   <!-- Page Navigation -->
   <div class="page-nav-section section hide-md-and-down">
     <div class="container">
       <ul class="d-flex align-items-center">
-        <li><a href="{% url 'ads' %}" class="active">All</a></li>
+        <li><a href="{% url 'ads' %}" class="active">{% trans "All"%}</a></li>
         <li class="d-flex align-items-center search-input-group">
             <form method="post">
                 {% csrf_token %}
@@ -60,7 +61,7 @@
                         <span>{{ n.area }}</span>
                     </div>
                 </div>
-                <a href="{% url 'ad_detail' pk=n.pk %}" class="main-btn">Learn more</a>
+                <a href="{% url 'ad_detail' pk=n.pk %}" class="main-btn">{% trans "Learn more"%}</a>
             </div>
         </div>
         {% endfor %}
@@ -82,17 +83,17 @@
                                 class="img-fluid">
                         </div>
                         <div class="col-md-6 col-lg-4 content">
-                            <h5>Opening hours</h5>
+                            <h5>{% trans "Opening hours"%}</h5>
                             <div class="openings">
                                 <div class="opening opening-days">
-                                    <p class="day">Monday</p>
+                                    <p class="day">{% trans "Monday"%}</p>
                                     <div class="divider"></div>
-                                    <p class="day">Friday</p>
+                                    <p class="day">{% trans "Friday"%}</p>
                                 </div>
                                 <div class="opening opening-time">
-                                    <p class="time">09.00 am</p>
+                                    <p class="time">{% trans "09.00 am"%}</p>
                                     <div class="divider"></div>
-                                    <p class="time">17.00 pm</p>
+                                    <p class="time">{% trans "17.00 pm"%}</p>
                                 </div>
                             </div>
                             <p class="num">{{contactaddress.phone_number}}</p>
@@ -110,7 +111,7 @@
                         <div class="col-12 col-md-6 col-lg-4 content">
                             <h5>Address</h5>
                             <p class="address">{{contactaddress.address}}</p>
-                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">Open in Maps</button></a>
+                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">{% trans "Open in Maps"%}</button></a>
                         </div>
                     </div>
                 </div>
@@ -120,22 +121,22 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-7 content">
-                            <h4>You have a question for us?</h4>
-                            <p>leave your message below or email us at {{contactaddress.email}}</p>
+                            <h4>{% trans "You have a question for us?"%}</h4>
+                            <p>{% trans "leave your message below or email us at"%} {{contactaddress.email}}</p>
                             <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
                                 {% csrf_token %}
                                 <div class="form-group required">
-                                    <label for="email">Email address</label>
+                                    <label for="email">{% trans "Email address"%}</label>
                                     <input type="email" id="email" class="form-control" name="email"
                                         placeholder="johnLP12@gmail.com" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="message">Message</label>
+                                    <label for="message">{% trans "Message"%}</label>
                                     <input type="text" id="message" class="form-control" name="message"
                                         placeholder="Hello, I wanted to know about this particular course called..." />
-                                    <span class="small-text">120 characters left</span>
+                                    <span class="small-text">{% trans "120 characters left"%}</span>
                                 </div>
-                                <button class="main-btn" type="submit">Send message</button>
+                                <button class="main-btn" type="submit">{% trans "Send message"%}</button>
                             </form>
                         </div>
                         <div class="d-none d-lg-block col-lg-5 media">

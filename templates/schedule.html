@@ -1,12 +1,12 @@
 {% extends 'base/base.html' %}
-
+{% load i18n %}
 {% block content %}
   <!-- Header -->
   <div class="breadcrub breadcrub-style-3 section">
     <div class="bg-img">
       <div class="container">
         <div class="heading">
-          <h1 class="page-heading">Faculties</h1>
+          <h1 class="page-heading">{% trans "Faculties"%}</h1>
         </div>
       </div>
     </div>
@@ -19,11 +19,11 @@
 
       <!-- Stripped Table -->
       <div class="stripped-table-part">
-        <h2>Choose your faculty</h2>
+        <h2>{% trans "Choose your faculty"%}</h2>
         <table class="table stripped-package-table margin-top-80 margin-bottom-80">
             <thead>
               <tr>
-                <th scope="col">Faculties</th>
+                <th scope="col">{% trans "Faculties"%}</th>
               </tr>
             </thead>
             <tbody>

@@ -1,13 +1,13 @@
 {% extends 'base/base.html' %}
-
+{% load i18n %}
 {% block content %}
   <!-- Contact Breadcrub -->
   <div class="contact-breadcrumb section">
     <div class="row">
       <div class="col-12 col-lg-7 content">
         <div class="inner-content">
-          <h1 class='page-heading'>Contact us</h1>
-          <p class="d-none d-xl-block">Leave a message if you have any question for us. We will fastly contact you and will help you! Thank you for choosing us!</p>
+          <h1 class='page-heading'>{% trans "Contact us"%}</h1>
+          <p class="d-none d-xl-block">{% trans "Leave a message if you have any question for us. We will fastly contact you and will help you! Thank you for choosing us!"%}</p>
         </div>
       </div>
       <div class="d-none d-lg-block col-5 map">
@@ -31,16 +31,16 @@
         <div class="col-12 col-md-6">
           <div class="contact-info">
             <div class="openings">
-              <h2 class="margin-bottom-30">Opening hours</h2>
+              <h2 class="margin-bottom-30">{% trans "Opening hours"%}</h2>
               <div class="opening opening-days">
-                <p class="day">Monday</p>
+                <p class="day">{% trans "Monday"%}</p>
                 <div class="divider"></div>
-                <p class="day">Friday</p>
+                <p class="day">{% trans "Friday"%}</p>
               </div>
               <div class="opening opening-time">
-                <p class="time">09.00 am</p>
+                <p class="time">{% trans "09.00 am"%}</p>
                 <div class="divider"></div>
-                <p class="time">17.00 pm</p>
+                <p class="time">{% trans "17.00 pm"%}</p>
               </div>
             </div>
 
@@ -81,25 +81,25 @@
 
         </div>
         <div class="col-12 col-md-6 col-xl-5 message-from">
-          <h2>Leave us a message</h2>
+          <h2>{% trans "Leave us a message"%}</h2>
 
           <form class="text-left form-style-2" method="post">
             {% csrf_token %}
             <div class="form-group required">
-              <label for="username">Phone number</label>
+              <label for="username">{% trans "Phone number"%}</label>
               <input type="text" id="username" class="form-control" name="phone_number" placeholder="john Louis Perrie" required>
             </div>
             <div class="form-group required">
-              <label for="email">Email address</label>
+              <label for="email">{% trans "Email address"%}</label>
               <input type="email" id="email" class="form-control" name="email" placeholder="johnLP12@gmail.com" required/>
             </div>
             <div class="form-group required">
-              <label for="message">Message</label>
+              <label for="message">{% trans "Message"%}</label>
               <input type="text" id="message" class="form-control" name="message"
                 placeholder="I wanted to enquire about…" required>
-              <span class="small-text">120 characters left</span>
+              <span class="small-text">{% trans "120 characters left"%}</span>
             </div>
-            <button class="main-btn" type="submit">Send message</button>
+            <button class="main-btn" type="submit">{% trans "Send message"%}</button>
           </form>
         </div>
       </div>

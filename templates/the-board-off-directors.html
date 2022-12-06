@@ -1,11 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   <!-- Breadcrumb -->
   <section class="breadcrub-style-4 section margin-bottom-0">
     <div class="container">
       <div class="heading">
-        <h2>The board of directors</h2>
+        <h2>{% trans "The board of directors"%}</h2>
       </div>
     </div>
   </section>
@@ -13,7 +14,7 @@
   <!-- Popular Courses -->
   <section class="popular-courses section margin-top-0">
     <div class="container">
-      <h2 class="rotated-text-2 d-none d-md-block">Directors</h2>
+      <h2 class="rotated-text-2 d-none d-md-block">{% trans "Directors"%}</h2>
       <div class="row">
         {% for q in query %}
         <div class="col-12 col-md-6 col-lg-3 padding-0">

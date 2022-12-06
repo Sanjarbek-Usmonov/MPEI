@@ -1,11 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   <!-- Breadcrumb -->
   <section class="breadcrub-style-4 section margin-bottom-0">
     <div class="container">
       <div class="heading">
-        <h2>Leaders</h2>
+        <h2>{% trans "Leaders"%}</h2>
       </div>
     </div>
   </section>
@@ -24,12 +25,12 @@
                 <div class="card-img-overlay">
                   <div class="card-body">
                     <h3>{{q.name}}</h3>
-                    <p class="auther"><b>Email:</b> {{q.email}}</p>
+                    <p class="auther"><b>{% trans "Email"%}:</b> {{q.email}}</p>
                     <p class="details">{{q.some_text}}</p>
 
                     <div class="more">
-                      <h5 class="price"><sup>Tel:</sup> {{q.phone_number}}</h5>
-                      <a href="{% url 'leader-detail' pk=q.pk %}" class="small-btn">More</a>
+                      <h5 class="price"><sup>{% trans "Tel"%}:</sup> {{q.phone_number}}</h5>
+                      <a href="{% url 'leader-detail' pk=q.pk %}" class="small-btn">{% trans "More"%}</a>
                     </div>
                   </div>
                 </div>
@@ -39,7 +40,7 @@
           {% endfor %}
         </div>
 
-        <h1 class="rotated-text d-none d-lg-block">LEADERS</h1>
+        <h1 class="rotated-text d-none d-lg-block">{% trans "LEADERS"%}</h1>
       </div>
 
     </div>

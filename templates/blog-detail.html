@@ -1,12 +1,13 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   <!-- Header Four -->
   <div class="section">
     <div class="breadcrub-style-4">
       <div class="container">
         <div class="heading">
-          <h2>News</h2>
+          <h2>{% trans 'News'%}</h2>
         </div>
       </div>
     </div>
@@ -123,12 +124,12 @@
         <div class="reacts">
           <div class="react">
             <i class="fas fa-eye"></i>
-            <p>{{new.count}} views</p>
+            <p>{{new.count}} {% trans 'views'%}</p>
           </div>
         </div>
 
         <div class="more">
-          <a href="blog-detail.html#">Continue reading <span class="arrow">🡢</span></a>
+          <a href="blog-detail.html#">{% trans "Continue reading"%} <span class="arrow">🡢</span></a>
         </div>
       </div>
     </div>
@@ -148,17 +149,17 @@
                                 class="img-fluid">
                         </div>
                         <div class="col-md-6 col-lg-4 content">
-                            <h5>Opening hours</h5>
+                            <h5>{% trans 'Opening hours'%}</h5>
                             <div class="openings">
                                 <div class="opening opening-days">
-                                    <p class="day">Monday</p>
+                                    <p class="day">{% trans "Monday"%}</p>
                                     <div class="divider"></div>
-                                    <p class="day">Friday</p>
+                                    <p class="day">{% trans "Friday"%}</p>
                                 </div>
                                 <div class="opening opening-time">
-                                    <p class="time">09.00 am</p>
+                                    <p class="time">{% trans "09.00 am"%}</p>
                                     <div class="divider"></div>
-                                    <p class="time">17.00 pm</p>
+                                    <p class="time">{% trans "17.00 pm"%}</p>
                                 </div>
                             </div>
                             <p class="num">{{contactaddress.phone_number}}</p>
@@ -174,9 +175,9 @@
                             <div id="location-map"></iframe></div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 content">
-                            <h5>Address</h5>
+                            <h5>{% trans "Address"%}</h5>
                             <p class="address">{{contactaddress.address}}</p>
-                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">Open in Maps</button></a>
+                            <a href="{{contactaddress.address_URL}}"><button class="main-btn">{% trans "Open in Maps"%}</button></a>
                         </div>
                     </div>
                 </div>
@@ -186,22 +187,22 @@
                     </div>
                     <div class="row">
                         <div class="col-12 col-lg-7 content">
-                            <h4>You have a question for us?</h4>
-                            <p>leave your message below or email us at {{contactaddress.email}}</p>
+                            <h4>{% trans "You have a question for us?"%}</h4>
+                            <p>{% trans 'leave your message below or email us at'%} {{contactaddress.email}}</p>
                             <form class="text-left form-style-2" method="post" action="{% url 'receivedmessages' %}">
                                 {% csrf_token %}
                                 <div class="form-group required">
-                                    <label for="email">Email address</label>
+                                    <label for="email">{% trans 'Email address'%}</label>
                                     <input type="email" id="email" class="form-control" name="email"
                                         placeholder="johnLP12@gmail.com" />
                                 </div>
                                 <div class="form-group">
-                                    <label for="message">Message</label>
+                                    <label for="message">{% trans 'Message'%}</label>
                                     <input type="text" id="message" class="form-control" name="message"
                                         placeholder="Hello, I wanted to know about this particular course called..." />
-                                    <span class="small-text">120 characters left</span>
+                                    <span class="small-text">{% trans "120 characters left"%}</span>
                                 </div>
-                                <button class="main-btn" type="submit">Send message</button>
+                                <button class="main-btn" type="submit">{% trans "Send message"%}</button>
                             </form>
                         </div>
                         <div class="d-none d-lg-block col-lg-5 media">
@@ -218,16 +219,16 @@
   <!-- More blogs -->
   <section class="more-carousel-1 text-center">
     <div class="container">
-      <h2 class="margin-bottom-60">You might also like...</h2>
+      <h2 class="margin-bottom-60">{% trans "You might also like..."%}</h2>
       <div class="blog-carousel-wrap">
         <div class="blog-carousel-controls">
           <ul class="carousel-icon">
             <li class="prev">
               <i class="flaticon-back"></i>
-              <span class="text">Previous post</span>
+              <span class="text">{% trans "Previous post"%}</span>
             </li>
             <li class="next">
-              <span class="text">Next post</span>
+              <span class="text">{% trans 'Next post'%}</span>
               <i class="flaticon-next"></i>
             </li>
           </ul>
@@ -240,7 +241,7 @@
                 </div>
                 <div class="content">
                     <p class="card-text">{{n.created_at|date:'d M, Y'}}</p>
-                    <a href="blog-detail.html#" class="title">{{n.title}}</a>
+                    <a href="{% url 'news-detail' pk=n.pk %}" class="title">{{n.title}}</a>
                 </div>
             </div>
             {% endfor %}

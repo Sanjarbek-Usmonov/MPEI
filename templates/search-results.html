@@ -1,12 +1,12 @@
 {% extends 'base/base.html' %}
-
+{% load i18n %}
 {% block content %}
   <!-- Header -->
   <div class="breadcrub breadcrub-style-3 section">
     <div class="bg-img">
       <div class="container">
         <div class="heading">
-          <h1 class="page-heading">Results</h1>
+          <h1 class="page-heading">{% trans "Results"%}</h1>
         </div>
       </div>
     </div>
@@ -19,11 +19,11 @@
 
       <!-- Basic Table -->
       <div class="basic-table-part">
-        <h2>Ennouncements search results</h2>
+        <h2>{% trans "Ennouncements search results"%}</h2>
         <table class="table basic-package-table margin-top-80 margin-bottom-80">
             <thead>
               <tr>
-                <th scope="col">Ennouncements</th>
+                <th scope="col">{% trans "Ennouncements"%}</th>
               </tr>
             </thead>
             <tbody>
@@ -39,12 +39,12 @@
 
       <!-- Stripped Table -->
       <div class="stripped-table-part">
-        <h2>News search results</h2>
+        <h2>{% trans "News search results"%}</h2>
 
         <table class="table stripped-package-table margin-top-80 margin-bottom-80">
             <thead>
               <tr>
-                <th scope="col">News</th>
+                <th scope="col">{% trans "News"%}</th>
               </tr>
             </thead>
             <tbody>
@@ -59,11 +59,11 @@
 
 
       <div class="basic-table-part">
-        <h2>Scientific events search results</h2>
+        <h2>{% trans "Scientific events search results"%}</h2>
         <table class="table basic-package-table margin-top-80 margin-bottom-80">
             <thead>
               <tr>
-                <th scope="col">Scientific events</th>
+                <th scope="col">{% trans "Scientific events"%}</th>
               </tr>
             </thead>
             <tbody>

@@ -1,11 +1,12 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
   <!-- Breadcrumb -->
   <section class="breadcrub-style-4 section margin-bottom-0">
     <div class="container">
       <div class="heading">
-        <h2>FAQs</h2>
+        <h2>{% trans "FAQs"%}</h2>
       </div>
     </div>
   </section>
@@ -15,7 +16,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-md-7 col-lg-6 content">
-          <h2>Frequently Asked Questions</h2>
+          <h2>{% trans "Frequently Asked Questions"%}</h2>
             <div class="accordion-wrapper margin-top-40">
                 <div id="accordion">
                     {% for q in query %}
@@ -153,28 +154,28 @@
   <div class="question-form-section section">
     <div class="container text-center">
       <img src="{% static 'assets/img/University/FAQ/discuss-issue.png' %}" alt="discuss-issue">
-      <h2>You have another question for us?</h2>
-      <h5>Leave your message below</h5>
+      <h2>{% trans "You have another question for us?"%}</h2>
+      <h5>{% trans "Leave your message below"%}</h5>
 
       <form class="text-left form-style-2" method="post" action="{% url 'contact' %}">
         {% csrf_token %}
         <div class="form-row">
           <div class="form-group col-12 col-lg-6 required">
-            <label for="email">Email address</label>
+            <label for="email">{% trans "Email address"%}</label>
             <input type="email" id="email" class="form-control" name="email" placeholder="johnLP12@gmail.com" required/>
           </div>
           <div class="form-group col-12 col-lg-6 required">
-            <label for="phone_number">Phone number</label>
+            <label for="phone_number">{% trans "Phone number"%}</label>
             <input type="text" id="email" class="form-control" name="phone_number" placeholder="+998 90 000 00 00" required/>
           </div>
           <div class="form-group col-12 col-lg-12">
-            <label for="message">Message</label>
+            <label for="message">{% trans "Message" %}</label>
             <input type="text" id="message" class="form-control" name="message"
               placeholder="Hello, I wanted to know about this theme..." />
-            <span class="small-text">120 characters left</span>
+            <span class="small-text">{% trans "120 characters left"%}</span>
           </div>
         </div>
-        <button class="main-btn" type="submit">Submit</button>
+        <button class="main-btn" type="submit">{% trans "Submit"%}</button>
       </form>
     </div>
   </div>
