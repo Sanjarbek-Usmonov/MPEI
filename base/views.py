@@ -109,13 +109,15 @@ def search_results(request):
         scien_event = ScientEvents.objects.filter(
             Q(name__icontains=request.POST['search'])
         )[::-1]
-    context = {
-        'ads': ads,
-        'news': news,
-        'scien_event': scien_event,
-        'site_logo': site_logo,
-        'sociallinks': sociallinks,
-        'contactaddress': contactaddress,
-        'newslettertext': newslettertext,
-    }
-    return render(request, 'search-results.html', context=context)
+        context = {
+            'ads': ads,
+            'news': news,
+            'scien_event': scien_event,
+            'site_logo': site_logo,
+            'sociallinks': sociallinks,
+            'contactaddress': contactaddress,
+            'newslettertext': newslettertext,
+        }
+        return render(request, 'search-results.html', context=context)
+    else:
+        return HttpResponseBadRequest()

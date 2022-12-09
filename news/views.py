@@ -18,7 +18,7 @@ def newsview(request):
     else:
         newss = News.objects.all()[::-1]
     page = request.GET.get('page', 1)
-    paginator = Paginator(newss, 10)
+    paginator = Paginator(newss, 9)
     try:
         news = paginator.page(page)
     except PageNotAnInteger:

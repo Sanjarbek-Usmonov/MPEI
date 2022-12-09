@@ -34,7 +34,7 @@ class Schedule(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_("updated_at"))
 
     def __str__(self) -> str:
-        return self.group_id
+        return str(self.group_id)
 
     class Meta:
         verbose_name = _("Schedule")
