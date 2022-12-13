@@ -43,7 +43,7 @@
                         {% if site_logo %}
                         <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
                         {% else %}
-                        <h2 style="color:white;"><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> MPEI</h2>
+                        <h2 style="color:black;"><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> M<b style="color:red;">P</b>EI</h2>
                         {% endif %}
                     </a>
 
@@ -300,7 +300,7 @@
 </nav>
 
 <!-- Navbar for mobile screen -->
-<div class="navbar-mobile-2 sticky-bar d-block d-sm-none">
+<div class="navbar-mobile sticky-bar d-block d-sm-none">
     <div class="container-fluid">
         <div class="menu-toggler">
             <div class="hamburger-menu">
@@ -314,7 +314,7 @@
             {% if site_logo %}
             <a href="/">{{ site_logo.logo_name }}</a>
             {% else %}
-            <a>MPEI</a>
+            <a><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Logo" class="img-fluid"> M<b style="color:red;">P</b>EI</a>
             {% endif %}
         </div>
         <div class="divider"></div>

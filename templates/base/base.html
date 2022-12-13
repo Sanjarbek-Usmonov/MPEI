@@ -43,7 +43,7 @@
                             {% if site_logo %}
                             <h2>{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="Logo">{% endif %} {{ site_logo.logo_name }}</h2>
                             {% else %}
-                            <h2><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> MPEI</h2>
+                            <h2 style="color:black;"><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Nav Logo"> M<b style="color:red;">P</b>EI</h2>
                             {% endif %}
                         </a>
 
@@ -315,7 +315,7 @@
                 {% if site_logo %}
                 <a href="/">{% if site_logo.logo_image %}<img src="{{ site_logo.logo_image.url }}" alt="logo" class="img-fluid">{% endif %} {{ site_logo.logo_name }}</a>
                 {% else %}
-                <a><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Logo"> MPEI</a>
+                <a><img src="{% static 'assets/img/logos/mpei.png' %}" alt="Logo" class="img-fluid"> M<b style="color:red;">P</b>EI</a>
                 {% endif %}
             </div>
             <div class="divider"></div>
