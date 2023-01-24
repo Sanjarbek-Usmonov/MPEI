@@ -138,7 +138,12 @@
                                             <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
                                         </ul>
                                     </li>
-                                </li>            
+                                </li>     
+                                {% if qabullink.qabullink == True %}
+                                <li class="menu-item">
+                                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                                </li>       
+                                {% endif %}
                             </ul>
                         </div>
                         <!-- For Tablet Screen -> End -->
@@ -227,6 +232,11 @@
                                         </li>
                                     </ul>
                                 </li>
+                                {% if qabullink.qabullink == True %}
+                                <li class="menu-item">
+                                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                                </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </nav>
@@ -450,6 +460,11 @@
                         <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
                     </ul>
                 </li>
+                {% if qabullink.qabullink == True %}
+                <li class="menu-item">
+                    <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>
+                </li>
+                {% endif %}
             </ul>
         </div>
 

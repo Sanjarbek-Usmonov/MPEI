@@ -44,3 +44,12 @@ class PartnersAdmin(MyTranslationAdmin):
 class HonoraryAdmin(MyTranslationAdmin):
     list_display = ['id', 'fullname']
     search_fields = ['fullname', 'id']
+
+@admin.register(QabulLink)
+class QabulLinkAdmin(admin.ModelAdmin):
+    list_display = ['id']
+    search_fields = ['id']
+
+    def has_add_permission(self, request):
+        return False if self.model.objects.count() > 0 else super().has_add_permission(request)
+

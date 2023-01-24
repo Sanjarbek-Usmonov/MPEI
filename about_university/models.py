@@ -58,3 +58,10 @@ class Honorary(models.Model):
         verbose_name = _("Honorary people")
         verbose_name_plural = _("Honorary people")
 
+
+class QabulLink(models.Model):
+    qabullink = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = _("Qabul link")
+        verbose_name_plural = _("Qabul link")

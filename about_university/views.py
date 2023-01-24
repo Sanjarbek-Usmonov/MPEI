@@ -7,6 +7,7 @@ def about_university_view(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'introduce-MEI':
         query = IntroduceMEI.objects.all().first()
@@ -20,6 +21,7 @@ def about_university_view(request, slug=None):
         query = Honorary.objects.all()
     
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
