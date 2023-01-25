@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from base.models import *
 from .models import *
+from about_university.models import QabulLink
 from django.utils.translation import gettext_lazy as _
 
 def univer_life_view(request, slug=None):
@@ -8,6 +9,7 @@ def univer_life_view(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'culture':
         query = Culture.objects.all().first()
@@ -19,6 +21,7 @@ def univer_life_view(request, slug=None):
         query = PsycoSupport.objects.all().first()
     
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,

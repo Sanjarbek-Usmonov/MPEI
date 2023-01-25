@@ -3,6 +3,7 @@ from .models import *
 from django.http import HttpResponseBadRequest
 from ads.models import Ads
 from news.models import News
+from about_university.models import QabulLink
 from django.db.models import Q
 from science_and_innovation.models import ScientEvents
 
@@ -18,6 +19,7 @@ def index(request):
     introsection = IntroSection.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
     news = News.objects.all()[::-1][:6]
     
     testimonials = Testimonials.objects.all()
@@ -25,6 +27,7 @@ def index(request):
     ads = Ads.objects.all()[::-1][:3]
     ad_odd = ads[1]
     context = {
+        'qabullink': qabullink,
         'site_logo': site_logo,
         'introsection': introsection,
         'sociallinks': sociallinks,
@@ -62,6 +65,7 @@ def contact_view(request):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
     if request.method == 'POST':
         ReceivedMessages.objects.create(
             email=request.POST['email'],
@@ -70,6 +74,7 @@ def contact_view(request):
         )
         return redirect('contact')
     context = {
+        'qabullink': qabullink,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
         'contactaddress': contactaddress,
@@ -82,10 +87,12 @@ def faqs(request):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     query = FAQs.objects.all()
 
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -99,6 +106,7 @@ def search_results(request):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
     if request.method == 'POST':
         ads = Ads.objects.filter(
             Q(name__icontains=request.POST['search']) | Q(area__icontains=request.POST['search'])
@@ -110,6 +118,7 @@ def search_results(request):
             Q(name__icontains=request.POST['search'])
         )[::-1]
         context = {
+            'qabullink': qabullink,
             'ads': ads,
             'news': news,
             'scien_event': scien_event,

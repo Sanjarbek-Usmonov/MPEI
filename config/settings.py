@@ -40,6 +40,7 @@ PROJECT_APPS = [
     'structure',
     'ads',
     'news',
+    'teachers',
     'ckeditor',
     'ckeditor_uploader',
 ]

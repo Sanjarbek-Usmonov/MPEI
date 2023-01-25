@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from base.models import *
+from about_university.models import QabulLink
 from .models import *
 
 @login_required
@@ -9,9 +10,11 @@ def schedule(request):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     query = Faculty.objects.all()
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -26,10 +29,12 @@ def group(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     query = Group.objects.filter(faculty_id=pk)
 
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -43,6 +48,7 @@ def edu(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'edu-program':
         query = EduProgram.objects.all().first()
@@ -60,6 +66,7 @@ def edu(request, slug=None):
         query = OfficialDocs.objects.all().first()
 
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,

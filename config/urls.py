@@ -36,6 +36,7 @@ urlpatterns += i18n_patterns(
     path('in-f/', include('foreign.urls')),
     path('university/', include('university_life.urls')),
     path('structure/', include('structure.urls')),
+    path('teachers/', include('teachers.urls')),
 )
 handler404 = "base.views.page_not_found_view"
 # handler500 = "base.views.custom_error_view"

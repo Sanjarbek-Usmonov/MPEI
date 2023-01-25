@@ -138,6 +138,14 @@
                                             <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
                                         </ul>
                                     </li>
+                                    {% if user.is_authenticated and request.user.is_superuser == True %}
+                                    <li class="menu-item">
+                                        <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">{% trans "E'lon qo'shish" %}</a>
+                                    </li>
+                                    {% endif %}
                                 </li>     
                                 {% if qabullink.qabullink == True %}
                                 <li class="menu-item">
@@ -230,6 +238,14 @@
                                                 <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
                                             </ul>
                                         </li>
+                                        {% if user.is_authenticated and request.user.is_superuser == True %}
+                                        <li class="sub-menu-item">
+                                            <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                                        </li>
+                                        <li class="sub-menu-item">
+                                            <a href="#">{% trans "E'lon qo'shish" %}</a>
+                                        </li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                                 {% if qabullink.qabullink == True %}
@@ -460,6 +476,14 @@
                         <li><a href="{% url 'scient-concil' slug='public-organizations' %}">{% trans "Jamoat tashkilotlari"%}</a></li>
                     </ul>
                 </li>
+                {% if user.is_authenticated and request.user.is_superuser == True %}
+                <li class="menu-item">
+                    <a href="#">{% trans "Yangilik qo'shish" %}</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">{% trans "E'lon qo'shish" %}</a>
+                </li>
+                {% endif %}
                 {% if qabullink.qabullink == True %}
                 <li class="menu-item">
                     <a href="https://qabul.mpei.uz">{% trans 'Qabul'%}</a>

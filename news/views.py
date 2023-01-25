@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import News
 from base.models import *
+from about_university.models import QabulLink
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
@@ -10,6 +11,7 @@ def newsview(request):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if request.method == 'POST' and 'search-ad' in request.POST:
         newss = News.objects.filter(
@@ -26,6 +28,7 @@ def newsview(request):
     except EmptyPage:
         news = paginator.page(paginator.num_pages)
     context = {
+        'qabullink': qabullink,
         'news': news,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -39,6 +42,7 @@ def news_detailview(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     news = News.objects.all()[::-1][:6]
     try:
@@ -48,6 +52,7 @@ def news_detailview(request, pk):
     except Exception as e:
         new['title'] = _('Object does not find! Sorry.')
     context = {
+        'qabullink': qabullink,
         'new': new,
         'news': news,
         'site_logo': site_logo,

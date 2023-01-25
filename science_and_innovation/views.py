@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from base.models import *
+from about_university.models import QabulLink
 from .models import *
 from django.utils.translation import gettext_lazy as _
 
@@ -8,6 +9,7 @@ def science_view(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'research':
         query = ResearchAndDev.objects.all().first()
@@ -21,6 +23,7 @@ def science_view(request, slug=None):
         query = ScientEvents.objects.all()
     
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -39,9 +42,11 @@ def scientific_event_detail(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     query = ScientEventDetail.objects.get(scientevent_id=pk)
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,

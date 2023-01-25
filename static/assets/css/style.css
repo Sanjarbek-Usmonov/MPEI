@@ -467,7 +467,7 @@ span {
 .container {
   width: 80%;
   margin: 0 auto;
-  margin-top: 4.2%;
+  margin-top: 8.2%;
   max-width: 1080px;
 }
 
@@ -478,7 +478,7 @@ span {
 }
 
 .section {
-  margin: 6vh 0 !important;
+  margin: 10vh 0 !important;
 }
 
 .page-heading {

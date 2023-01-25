@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from base.models import SiteLogo, SocialLinks, ContactAddress, JoinOurNewsletterText
 from .models import Ads, AdDetail
+from about_university.models import QabulLink
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils.translation import gettext_lazy as _
 from django.db.models import Q
@@ -10,6 +11,8 @@ def ads(request):
     sociallinks = SocialLinks.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
+    qabullink = QabulLink.objects.first()
+
     if request.method == 'POST' and 'search-ad' in request.POST:
         advers = Ads.objects.filter(
             Q(name__icontains=request.POST['search-ad']) | Q(area__icontains=request.POST['search-ad'])
@@ -26,6 +29,7 @@ def ads(request):
         ads = paginator.page(paginator.num_pages)
     ads_odd = ads[::2]
     context = {
+        'qabullink': qabullink,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
         'contactaddress': contactaddress,
@@ -40,6 +44,7 @@ def ad_detail(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
+    qabullink = QabulLink.objects.first()
     ad_count = Ads.objects.get(pk=pk)
     ad_count.count += 1
     ad_count.save()
@@ -49,6 +54,7 @@ def ad_detail(request, pk):
         ad = _('Object does not find! Sorry.')
     
     context = {
+        'qabullink': qabullink,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
         'contactaddress': contactaddress,

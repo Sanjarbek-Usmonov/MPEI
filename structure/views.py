@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from base.models import *
+from about_university.models import QabulLink
 from django.utils.translation import gettext_lazy as _
 
 def scient_concil_view(request, slug=None):
@@ -8,6 +9,7 @@ def scient_concil_view(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'the-board-off-directors':
         query = TheBoardOfDirectors.objects.all()
@@ -23,6 +25,7 @@ def scient_concil_view(request, slug=None):
         query = PublicOrganizations.objects.all().first()
     
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -43,8 +46,10 @@ def leaders(request):
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
     query = MPEIuzLeaders.objects.all()
+    qabullink = QabulLink.objects.first()
 
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -58,6 +63,7 @@ def leader_detail(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     try:
         query = MPEIuzLeaderDetail.objects.get(mpeiuzLeaders_id=pk)
@@ -65,6 +71,7 @@ def leader_detail(request, pk):
         query = 'Not Found'
 
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,

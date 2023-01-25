@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from base.models import *
+from about_university.models import QabulLink
 from .models import *
 from django.utils.translation import gettext_lazy as _
 
@@ -8,6 +9,7 @@ def international_view(request, slug=None):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     if slug == 'preparing-foreigners':
         query = PreparingForeigners.objects.all().first()
@@ -29,6 +31,7 @@ def international_view(request, slug=None):
         query = ForeignPrograms.objects.all()
     
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
@@ -45,12 +48,14 @@ def foreign_program_detail(request, pk):
     sociallinks = SocialLinks.objects.all().first()
     contactaddress = ContactAddress.objects.all().first()
     newslettertext = JoinOurNewsletterText.objects.all().first()
+    qabullink = QabulLink.objects.first()
 
     try:
         query = ForeignProgramDetail.objects.get(foreignprograms_id=pk)
     except Exception as e:
         query = 'Not found'
     context = {
+        'qabullink': qabullink,
         'query': query,
         'site_logo': site_logo,
         'sociallinks': sociallinks,
