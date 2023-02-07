@@ -3,18 +3,18 @@
 {% load i18n %}
 {% block content %}
   <!-- Header Four -->
-  <div class="section">
+  {% comment %} <div class="section">
     <div class="breadcrub-style-4">
-      <div class="container">
-        <div class="heading">
-          <h2>{% trans "News"%}</h2>
-        </div>
-      </div>
+    </div>
+  </div> {% endcomment %}
+  <div class="container">
+    <div class="heading">
+      <h2>{% trans "News"%}</h2>
     </div>
   </div>
 
     <!-- Page Navigation -->
-    <div class="page-nav-section section hide-md-and-down">
+    <div class="page-nav-section section hide-md-and-down padding-0">
       <div class="container">
         <ul class="d-flex align-items-center">
           <li><a href="{% url 'news' %}" class="active">{% trans "All" %}</a></li>
